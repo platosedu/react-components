@@ -121,7 +121,7 @@ const handleChange = (e) => {
 ### Multiple Fields in a column (spacing test)
 ```js
 const [userValue, setUsername] = React.useState('Lorem Ipsum Sit Amet')
-const [emailValue, setUseremail] = React.useState('loremipsum@ahazou.com')
+const [emailValue, setUseremail] = React.useState('loremipsum@platos.io')
 const [addressValue, setUseraddress] = React.useState('Avenue Street, 101, Carnegie Hall')
 
 const handleChangeUser = (e) => {
