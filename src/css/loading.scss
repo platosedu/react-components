@@ -1,0 +1,72 @@
+.bar {
+  background: var(--color-primary-500);
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--spacing-xxs);
+}
+
+.peg {
+  display: block;
+  position: absolute;
+  right: 0;
+  width: var(--spacing-xxxxl);
+  height: 100%;
+  box-shadow: 0 0 var(--spacing-xs) var(--color-neutral-light-500),
+              0 0 var(--spacing-xxs) var(--color-neutral-light-500);
+  opacity: 1;
+  -webkit-transform: rotate(3deg) translate(0px, calc(#{var(--spacing-xxs)} * -1));
+  -ms-transform: rotate(3deg) translate(0px, calc(#{var(--spacing-xxs)} * -1));
+  transform: rotate(3deg) translate(0px, calc(#{var(--spacing-xxs)} * -1));
+}
+
+.spinner {
+  display: block;
+  position: fixed;
+  z-index: 1031;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+}
+
+.spinner-icon {
+  width: var(--spacing-md);
+  height: var(--spacing-md);
+  box-sizing: border-box;
+  border: solid 2px transparent;
+  border-top-color: var(--color-neutral-light-500);
+  border-left-color: var(--color-neutral-light-500);
+  border-radius: 50%;
+  -webkit-animation: nprogresss-spinner 400ms linear infinite;
+  animation: nprogress-spinner 400ms linear infinite;
+}
+
+.nprogress-custom-parent {
+  overflow: hidden;
+  position: relative;
+}
+
+.nprogress-custom-parent .spinner,
+.nprogress-custom-parent .bar {
+  position: absolute;
+}
+
+@-webkit-keyframes nprogress-spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes nprogress-spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+

@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+:root {
+    --color-primary-100: #0CEBFF;
+    --color-primary-200: #00E3F8;
+    --color-primary-300: #00D2E5;
+    --color-primary-400: #00C0D2;
+    --color-primary-500: #00AFBF;
+    --color-primary-600: #009EAC;
+    --color-primary-700: #008C99;
+    --color-primary-800: #007A86;
+    --color-primary-900: #006973;
+    --color-primary-100-contrast: #101010;
+    --color-primary-200-contrast: #101010;
+    --color-primary-300-contrast: #101010;
+    --color-primary-400-contrast: #101010;
+    --color-primary-500-contrast: #f0f0f0;
+    --color-primary-600-contrast: #f0f0f0;
+    --color-primary-700-contrast: #f0f0f0;
+    --color-primary-800-contrast: #f0f0f0;
+    --color-primary-900-contrast: #f0f0f0;
+    --color-primary-100-opacity: rgba(12,235,255,0.2);
+    --color-primary-200-opacity: rgba(0,227,248,0.2);
+    --color-primary-300-opacity: rgba(0,210,229,0.2);
+    --color-primary-400-opacity: rgba(0,192,210,0.2);
+    --color-primary-500-opacity: rgba(0,175,191,0.2);
+    --color-primary-600-opacity: rgba(0,158,172,0.2);
+    --color-primary-700-opacity: rgba(0,140,153,0.2);
+    --color-primary-800-opacity: rgba(0,122,134,0.2);
+    --color-primary-900-opacity: rgba(0,105,115,0.2);
+
+    --color-secondary-100: #F6CABF;
+    --color-secondary-200: #F2B3A3;
+    --color-secondary-300: #EF9C88;
+    --color-secondary-400: #EB866C;
+    --color-secondary-500: #E76F51;
+    --color-secondary-600: #E35836;
+    --color-secondary-700: #DB441E;
+    --color-secondary-800: #C03C1A;
+    --color-secondary-900: #A53317;
+    --color-secondary-100-contrast: #101010;
+    --color-secondary-200-contrast: #101010;
+    --color-secondary-300-contrast: #101010;
+    --color-secondary-400-contrast: #101010;
+    --color-secondary-500-contrast: #f0f0f0;
+    --color-secondary-600-contrast: #f0f0f0;
+    --color-secondary-700-contrast: #f0f0f0;
+    --color-secondary-800-contrast: #f0f0f0;
+    --color-secondary-900-contrast: #f0f0f0;
+    --color-secondary-100-opacity: rgba(246,202,191,0.2);
+    --color-secondary-200-opacity: rgba(242,179,163,0.2);
+    --color-secondary-300-opacity: rgba(239,156,136,0.2);
+    --color-secondary-400-opacity: rgba(235,134,108,0.2);
+    --color-secondary-500-opacity: rgba(231,111,81,0.2);
+    --color-secondary-600-opacity: rgba(227,88,54,0.2);
+    --color-secondary-700-opacity: rgba(219,68,30,0.2);
+    --color-secondary-800-opacity: rgba(192,60,26,0.2);
+    --color-secondary-900-opacity: rgba(165,51,23,0.2);
+
+  --color-neutral-dark-100: #5F5F5F;
+  --color-neutral-dark-200: #585858;
+  --color-neutral-dark-300: #525252;
+  --color-neutral-dark-400: #4B4B4B;
+  --color-neutral-dark-500: #444444;
+  --color-neutral-dark-600: #3D3D3D;
+  --color-neutral-dark-700: #363636;
+  --color-neutral-dark-800: #303030;
+  --color-neutral-dark-900: #292929;
+  --color-neutral-dark-100-contrast: #f0f0f0;
+  --color-neutral-dark-200-contrast: #f0f0f0;
+  --color-neutral-dark-300-contrast: #f0f0f0;
+  --color-neutral-dark-400-contrast: #f0f0f0;
+  --color-neutral-dark-500-contrast: #f0f0f0;
+  --color-neutral-dark-600-contrast: #f0f0f0;
+  --color-neutral-dark-700-contrast: #f0f0f0;
+  --color-neutral-dark-800-contrast: #f0f0f0;
+  --color-neutral-dark-900-contrast: #f0f0f0;
+  --color-neutral-dark-100-opacity: rgba(95,95,95,0.2);
+  --color-neutral-dark-200-opacity: rgba(88,88,88,0.2);
+  --color-neutral-dark-300-opacity: rgba(82,82,82,0.2);
+  --color-neutral-dark-400-opacity: rgba(75,75,75,0.2);
+  --color-neutral-dark-500-opacity: rgba(68,68,68,0.2);
+  --color-neutral-dark-600-opacity: rgba(61,61,61,0.2);
+  --color-neutral-dark-700-opacity: rgba(54,54,54,0.2);
+  --color-neutral-dark-800-opacity: rgba(48,48,48,0.2);
+  --color-neutral-dark-900-opacity: rgba(41,41,41,0.2);
+
+  --color-neutral-light-100: #F1F1F1;
+  --color-neutral-light-200: #E0E0E0;
+  --color-neutral-light-300: #CECECE;
+  --color-neutral-light-400: #BDBDBD;
+  --color-neutral-light-500: #ACACAC;
+  --color-neutral-light-600: #9B9B9B;
+  --color-neutral-light-700: #8A8A8A;
+  --color-neutral-light-800: #787878;
+  --color-neutral-light-900: #676767;
+  --color-neutral-light-100-contrast: #101010;
+  --color-neutral-light-200-contrast: #101010;
+  --color-neutral-light-300-contrast: #101010;
+  --color-neutral-light-400-contrast: #101010;
+  --color-neutral-light-500-contrast: #101010;
+  --color-neutral-light-600-contrast: #101010;
+  --color-neutral-light-700-contrast: #101010;
+  --color-neutral-light-800-contrast: #101010;
+  --color-neutral-light-900-contrast: #f0f0f0;
+  --color-neutral-light-100-opacity: rgba(241,241,241,0.2);
+  --color-neutral-light-200-opacity: rgba(224,224,224,0.2);
+  --color-neutral-light-300-opacity: rgba(206,206,206,0.2);
+  --color-neutral-light-400-opacity: rgba(189,189,189,0.2);
+  --color-neutral-light-500-opacity: rgba(172,172,172,0.2);
+  --color-neutral-light-600-opacity: rgba(155,155,155,0.2);
+  --color-neutral-light-700-opacity: rgba(138,138,138,0.2);
+  --color-neutral-light-800-opacity: rgba(120,120,120,0.2);
+  --color-neutral-light-900-opacity: rgba(103,103,103,0.2);
+
+  --color-error-100: #F95959;
+  --color-error-200: #F94242;
+  --color-error-300: #F82B2B;
+  --color-error-400: #F71313;
+  --color-error-500: #EA0808;
+  --color-error-600: #D30707;
+  --color-error-700: #BB0606;
+  --color-error-800: #A40606;
+  --color-error-900: #8C0505;
+  --color-error-100-contrast: #101010;
+  --color-error-200-contrast: #101010;
+  --color-error-300-contrast: #101010;
+  --color-error-400-contrast: #101010;
+  --color-error-500-contrast: #f0f0f0;
+  --color-error-600-contrast: #f0f0f0;
+  --color-error-700-contrast: #f0f0f0;
+  --color-error-800-contrast: #f0f0f0;
+  --color-error-900-contrast: #f0f0f0;
+  --color-error-100-opacity: rgba(249,89,89,0.2);
+  --color-error-200-opacity: rgba(249,66,66,0.2);
+  --color-error-300-opacity: rgba(248,43,43,0.2);
+  --color-error-400-opacity: rgba(247,19,19,0.2);
+  --color-error-500-opacity: rgba(234,8,8,0.2);
+  --color-error-600-opacity: rgba(211,7,7,0.2);
+  --color-error-700-opacity: rgba(187,6,6,0.2);
+  --color-error-800-opacity: rgba(164,6,6,0.2);
+  --color-error-900-opacity: rgba(140,5,5,0.2);
+
+  --color-alert-100: #FFC83C;
+  --color-alert-200: #FFC126;
+  --color-alert-300: #FFBB0F;
+  --color-alert-400: #F8B100;
+  --color-alert-500: #E1A100;
+  --color-alert-600: #CB9100;
+  --color-alert-700: #B48100;
+  --color-alert-800: #9D7100;
+  --color-alert-900: #876100;
+  --color-alert-100-contrast: #f0f0f0;
+  --color-alert-200-contrast: #f0f0f0;
+  --color-alert-300-contrast: #f0f0f0;
+  --color-alert-400-contrast: #f0f0f0;
+  --color-alert-500-contrast: #f0f0f0;
+  --color-alert-600-contrast: #f0f0f0;
+  --color-alert-700-contrast: #f0f0f0;
+  --color-alert-800-contrast: #f0f0f0;
+  --color-alert-900-contrast: #101010;
+  --color-alert-100-opacity: rgba(255,200,60,0.2);
+  --color-alert-200-opacity: rgba(255,193,38,0.2);
+  --color-alert-300-opacity: rgba(255,187,15,0.2);
+  --color-alert-400-opacity: rgba(248,177,0,0.2);
+  --color-alert-500-opacity: rgba(225,161,0,0.2);
+  --color-alert-600-opacity: rgba(203,145,0,0.2);
+  --color-alert-700-opacity: rgba(180,129,0,0.2);
+  --color-alert-800-opacity: rgba(157,113,0,0.2);
+  --color-alert-900-opacity: rgba(135,97,0,0.2);
+
+  --color-info-100: #D9EEFA;
+  --color-info-200: #BCE0F6;
+  --color-info-300: #9ED3F3;
+  --color-info-400: #81C5EF;
+  --color-info-500: #63B8EB;
+  --color-info-600: #45ABE7;
+  --color-info-700: #289DE3;
+  --color-info-800: #1B8BCF;
+  --color-info-900: #1778B2;
+  --color-info-100-contrast: #101010;
+  --color-info-200-contrast: #101010;
+  --color-info-300-contrast: #101010;
+  --color-info-400-contrast: #101010;
+  --color-info-500-contrast: #f0f0f0;
+  --color-info-600-contrast: #f0f0f0;
+  --color-info-700-contrast: #f0f0f0;
+  --color-info-800-contrast: #f0f0f0;
+  --color-info-900-contrast: #f0f0f0;
+  --color-info-100-opacity: rgba(217, 238, 250, 0.2);
+  --color-info-200-opacity: rgba(188, 224, 246, 0.2);
+  --color-info-300-opacity: rgba(158, 211, 243, 0.2);
+  --color-info-400-opacity: rgba(129, 197, 239, 0.2);
+  --color-info-500-opacity: rgba(99, 184, 235, 0.2);
+  --color-info-600-opacity: rgba(69, 172, 231, 0.2);
+  --color-info-700-opacity: rgba(40, 157, 227, 0.2);
+  --color-info-800-opacity: rgba(27, 139, 207, 0.2);
+  --color-info-900-opacity: rgba(23, 121, 178, 0.2);
+
+  --color-success-100: #10F682;
+  --color-success-200: #09EA79;
+  --color-success-300: #08D870;
+  --color-success-400: #08C666;
+  --color-success-500: #07B45D;
+  --color-success-600: #06A254;
+  --color-success-700: #06904A;
+  --color-success-800: #057E41;
+  --color-success-900: #046C38;
+  --color-success-100-contrast: #f0f0f0;
+  --color-success-200-contrast: #f0f0f0;
+  --color-success-300-contrast: #f0f0f0;
+  --color-success-400-contrast: #f0f0f0;
+  --color-success-500-contrast: #f0f0f0;
+  --color-success-600-contrast: #f0f0f0;
+  --color-success-700-contrast: #f0f0f0;
+  --color-success-800-contrast: #101010;
+  --color-success-900-contrast: #101010;
+  --color-success-100-opacity: rgba(16,246,130,0.2);
+  --color-success-200-opacity: rgba(9,234,121,0.2);
+  --color-success-300-opacity: rgba(8,216,112,0.2);
+  --color-success-400-opacity: rgba(8,198,102,0.2);
+  --color-success-500-opacity: rgba(7,180,93,0.2);
+  --color-success-600-opacity: rgba(6,162,84,0.2);
+  --color-success-700-opacity: rgba(6,144,74,0.2);
+  --color-success-800-opacity: rgba(5,126,65,0.2);
+  --color-success-900-opacity: rgba(4,108,56,0.2);
+
+  /* others */
+  --color-white: #fff;
+  --color-black: #000;
+
+  /* spacings */
+  --spacing-squish-xs: 4px 8px;
+  --spacing-squish-md: 8px 12px;
+  --spacing-squish-lg: 12px 16px;
+  --spacing-squish-xl: 12px 24px;
+  --spacing-squish-xxl: 24px 32px;
+
+  --spacing-xxs: 4px;
+  --spacing-xs: 8px;
+  --spacing-sm: 12px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+  --spacing-xxxl: 50px;
+  --spacing-xxxxl: 80px;
+
+  /* outside shadow */
+  --shadow-1: 0 0 10px rgba(0, 0, 0, 0.08);
+  --shadow-2: 0 2px 12px rgba(0, 0, 0, 0.10);
+  --shadow-3: 0 4px 4px rgba(0, 0, 0, 0.15);
+  --shadow-4: 0 8px 16px rgba(0, 0, 0, 0.15);
+  --shadow-5: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-6: 4px 4px 10px rgba(0, 0, 0, 0.10);
+
+  /* text shadow */
+  --shadow-text-1: 0 0 4px rgba(0, 0, 0, 0.4);
+
+  /* general sizes */
+  --size-field-height: 48px;
+  --size-dropdown-option-height: 48px;
+  --size-image-logo-width: 128px;
+  --size-image-logo-height: 58px;
+
+  --size-lg-button-height: 71px;
+  --size-md-button-height: 48px;
+  --size-sm-button-height: 40px;
+
+  --size-inline-button-height: 32px;
+  --size-micro-button-height: 24px;
+
+  --size-extended-button-height: 48px;
+  --size-extended-micro-button-height: 28px;
+  --size-circular-button: 64px;
+  --size-circular-micro-button: 32px;
+
+  --size-header-height-desktop: 100px;
+  --size-header-height-mobile: 66px;
+  --size-container-width: 1280px;
+
+  /* Checkbox */
+  --size-sm-checkbox-height: 13px;
+  --size-md-checkbox-height: 18px;
+  --size-lg-checkbox-height: 23px;
+
+  --size-sm-checkbox-width: 13px;
+  --size-md-checkbox-width: 18px;
+  --size-lg-checkbox-width: 23px;
+
+  /* Radio Button */
+  --size-sm-radiobutton-height: 13px;
+  --size-md-radiobutton-height: 18px;
+  --size-lg-radiobutton-height: 23px;
+
+  --size-sm-radiobutton-width: 13px;
+  --size-md-radiobutton-width: 18px;
+  --size-lg-radiobutton-width: 23px;
+
+  /* icon sizes */
+  --size-icon-xxs: 12px;
+  --size-icon-xs: 16px;
+  --size-icon-sm: 20px;
+  --size-icon-md: 24px;
+  --size-icon-lg: 32px;
+  --size-icon-xl: 48px;
+  --size-icon-xxl: 48px;
+  --size-icon-xxxl: 64px;
+
+  /* fonts */
+  --font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+
+  /* font size */
+  --font-size-xxs: 1rem; // 10px
+  --font-size-xs: 1.2rem; // 12px
+  --font-size-sm: 1.4rem; // 14px
+  --font-size-md: 1.6rem; // 16px
+  --font-size-lg: 1.8rem; // 18px
+  --font-size-xl: 2.7rem; // 27px
+  --font-size-xxl: 3.8rem; // 38px
+
+  /* font weight */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+  /* border radius */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 16px;
+  --border-radius-pill: 500px;
+  --border-radius-circle: 50%;
+
+  /* depths */
+  --depth-base: 1;
+  --depth-card-course-pricing: 1;
+  --depth-dropdown-menu: 2;
+  --depth-header: 2;
+  --depth-side-menu: 3;
+  --depth-modal: 3;
+  --depth-tooltip: 4;
+
+  /* Card Course */
+  --course-card-width: 295px;
+  --course-card-img-height: 158px;
+
+  --max-height: 9999px;
+  --min-height: 0px;
+
+  /* Card Course Pricing */
+  --course-card-pricing-width: 400px;
+
+  /* Formik */
+  --spacing-lg-button-mt: 50px;
+
+  /* Custom Error */
+  --size-error-lg-width: 600px;
+  --size-error-xl-width: 900px;
+  --spacing-error-xxl-ml: -15rem;
+}
+

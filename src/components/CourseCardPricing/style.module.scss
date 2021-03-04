@@ -1,0 +1,80 @@
+.card {
+  background-color: var(--color-white);
+  border: 0.1rem solid var(--color-neutral-light-100);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-xl);
+  transition: all .2s linear;
+  box-shadow: var(--shadow-1);
+  max-width: 450px;
+}
+
+.titleText {
+  margin-bottom: var(--spacing-xxs);
+
+  &:last-of-type {
+    margin-bottom: var(--spacing-sm);
+  }
+}
+
+.card .titleDescription,
+.card .subtitle {
+  color: var(--color-neutral-dark-100);
+  font-weight: var(--font-weight-semibold);
+}
+
+.content {
+  background: var(--color-neutral-light-200-opacity);
+  border-radius: var(--border-radius-sm);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-neutral-dark-100);
+}
+
+.contentoriginalPlan {
+  text-decoration: line-through;
+}
+
+.contentoriginalPlan,
+.contentPriceLabel {
+  margin-bottom: var(--spacing-xs);
+}
+
+.contentPriceContainer {
+  display: flex;
+}
+.contentCurrentPlan {
+  min-width: 50%;
+  margin-right: var(--spacing-sm);
+}
+
+.contentCurrentPlanObs {
+  color: var(--color-neutral-dark-100);
+}
+
+.contentDiscountPrice {
+  display: flex;
+  align-items: center;
+  height: var(--size-micro-button-height);
+  padding: 0 var(--spacing-sm);
+  border-radius: var(--border-radius-pill);
+  background-color: var(--color-secondary-100);
+  font-weight: var(--font-weight-semibold);
+  border: unset;
+
+  width: fit-content;
+  color: var(--color-secondary-500);
+}
+
+.content .contentButton {
+  text-align: left;
+  font-size: var(--font-size-xxs);
+}
+
+.obsText {
+  color: var(--color-neutral-dark-100);
+}
+
+.actionsButton {
+  margin-bottom: var(--spacing-sm);
+  width: 100%;
+}

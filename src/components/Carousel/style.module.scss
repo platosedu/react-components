@@ -1,0 +1,62 @@
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.container :global(.glider-track) {
+  padding-bottom: var(--spacing-md);
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  flex-direction: row;
+  box-sizing: border-box;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.carousel > * {
+  list-style: none;
+  margin: 0 calc(var(--spacing-sm) / 2);
+}
+
+.carousel a {
+  text-decoration: none;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.navigation {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  .navigationDisabled & {
+    display: none;
+  }
+}
+
+.button {
+  transform: scale(.8);
+}
+
+.button:global(.disabled) {
+  opacity: 0.2;
+}
+
+@media only screen and (min-width: 1024px) {
+  .carousel {
+    overflow: visible;
+    white-space: normal;
+  }
+}

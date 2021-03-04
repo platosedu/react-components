@@ -1,0 +1,80 @@
+.container {
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+.container svg {
+  width: 100%;
+  height: 100%;
+}
+
+.path,
+.externalComponent {
+  padding: calc(var(--spacing-md) - var(--spacing-sm));
+}
+
+.pathIcon,
+.externalComponentIcon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.xxs {
+  font-size: calc(var(--size-icon-xxs) - 6px);
+  line-height: var(--size-icon-xxs);
+  width: var(--size-icon-xxs);
+  height: var(--size-icon-xxs);
+}
+
+.xs {
+  font-size: calc(var(--size-icon-xs) - 6px);
+  line-height: var(--size-icon-xs);
+  width: var(--size-icon-xs);
+  height: var(--size-icon-xs);
+}
+
+.sm {
+  font-size: calc(var(--size-icon-sm) - 6px);
+  line-height: var(--size-icon-sm);
+  width: var(--size-icon-sm);
+  height: var(--size-icon-sm);
+}
+
+.md {
+  font-size: calc(var(--size-icon-md) - 6px);
+  line-height: var(--size-icon-md);
+  width: var(--size-icon-md);
+  height: var(--size-icon-md);
+}
+
+.lg {
+  font-size: calc(var(--size-icon-lg) - 6px);
+  line-height: var(--size-icon-lg);
+  width: var(--size-icon-lg);
+  height: var(--size-icon-lg);
+}
+
+.xl {
+  font-size: calc(var(--size-icon-xl) - 6px);
+  line-height: var(--size-icon-xl);
+  width: var(--size-icon-xl);
+  height: var(--size-icon-xl);
+}
+
+.xxl {
+  font-size: calc(var(--size-icon-xxl) - 6px);
+  line-height: var(--size-icon-xxl);
+  width: var(--size-icon-xxl);
+  height: var(--size-icon-xxl);
+}
+
+.xxxl {
+  font-size: calc(var(--size-icon-xxxl) - 6px);
+  line-height: var(--size-icon-xxxl);
+  width: var(--size-icon-xxxl);
+  height: var(--size-icon-xxxl);
+}

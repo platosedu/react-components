@@ -1,0 +1,72 @@
+import React from 'react'
+import style from './style.module.scss'
+import classNames from 'classnames'
+
+export interface CheckBoxProps {
+  value?: string | number
+  onChange?: React.ChangeEventHandler<HTMLInputElement>
+  id?: string
+  name?: string
+  label: string
+  error?: string | null
+  hint?: string | null
+  size?: 'sm' | 'md' | 'lg'
+  checked?: boolean
+  readonly?: boolean
+}
+
+const CheckBox: React.FC<CheckBoxProps> = ({
+  id,
+  value,
+  name,
+  label,
+  error,
+  hint,
+  size = 'sm',
+  checked,
+  readonly,
+  onChange
+}) => {
+  let sizeCheckBox = ''
+  let sizeText = ''
+
+  if (size === 'sm') {
+    sizeCheckBox = size
+    sizeText = 'textXxs'
+  } else if (size === 'md') {
+    sizeCheckBox = size
+    sizeText = 'textSm'
+  } else if (size === 'lg') {
+    sizeCheckBox = size
+    sizeText = 'textLg'
+  }
+
+  const containerClassNames = classNames(style.checkbox, {
+    [style.error]: Boolean(error)
+  })
+
+  return (
+    <>
+      <div className={containerClassNames}>
+        <label htmlFor={id} className={classNames(style[sizeText])}>
+          <input
+            className={classNames(style[sizeCheckBox])}
+            type="checkbox"
+            id={id}
+            name={name}
+            value={value}
+            onChange={onChange}
+            checked={checked}
+            disabled={readonly}
+          />
+
+          <span className={style.label}>{label}</span>
+        </label>
+
+        <p className={style.supportText}>{(error ? error : '') || hint}</p>
+      </div>
+    </>
+  )
+}
+
+export default CheckBox

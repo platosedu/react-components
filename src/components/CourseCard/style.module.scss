@@ -1,0 +1,154 @@
+.courseCard {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-neutral-light-100);
+  border-radius: var(--border-radius-sm);
+  width: var(--course-card-width);
+  cursor: pointer;
+  margin-bottom: var(--spacing-sm);
+
+  @media only screen and (max-width: 360px) {
+    min-width: var(--course-card-width);
+  }
+}
+
+.figure {
+  width: 100%;
+  height: var(--course-card-img-height);
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container {
+  padding: var(--spacing-md) var(--spacing-md) var(--spacing-sm) var(--spacing-sm);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex: 1;
+}
+
+.title {
+  margin-bottom: var(--spacing-xs);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-sm);
+  line-height: var(spacing-md);
+  color: var(--color-neutral-dark-900);
+  font-family: var(--font-family);
+}
+
+.contentText {
+  min-height: 85px;
+}
+
+.text {
+  font-size: var(--font-size-xs);
+  line-height: var(--spacing-md);
+  color: var(--color-neutral-dark-300);
+  margin-bottom: var(--spacing-xs);
+  font-family: var(--font-family);
+}
+
+.ellipsis {
+  text-overflow: ellipsis;
+}
+
+.sm {
+  font-size: var(--font-size-xxs);
+  line-height: var(--spacing-md);
+  margin-bottom: var(--spacing-xxs);
+}
+
+.promotionContainer {
+  margin: var(--spacing-xxs) 0;
+}
+
+.promotionTag {
+  padding: var(--spacing-xxs) var(--spacing-xs);
+  background: var(--color-secondary-200-opacity);
+  color: var(--color-secondary-500);
+  border-radius: var(--border-radius-pill);
+  display: inline-block;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-xxs);
+}
+
+.promotionOriginalPrice {
+  text-decoration: line-through;
+  color: var(--color-neutral-light-500);
+  font-size: var(--font-size-xs);
+  margin: var(--spacing-xs) 0 0;
+}
+
+.priceContainer {
+  display: flex;
+}
+
+.priceContainer .price {
+  color: var(--color-primary-500);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-lg);
+  line-height: var(--spacing-lg);
+  margin-bottom: var(--spacing-sm);
+
+  min-width: 50%;
+  margin-right: var(--spacing-sm);
+}
+
+.priceContainer .pricePlanObs {
+  color: var(--color-neutral-dark-100);
+  margin-left: var(--spacing-lg);
+}
+
+.infoContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.infoItem {
+  display: flex;
+  flex: 1;
+  margin-right: var(--spacing-md);
+  margin-top: var(--spacing-sm);
+  min-width: 120px;
+
+  &:last-child {
+    margin-right: unset;
+  }
+}
+
+.infoTag {
+  flex: 1;
+  display: inline-block;
+  color: var(--color-primary-900);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-xxs);
+  line-height: var(--spacing-md);
+  margin-left: var(--spacing-xs);
+}
+
+.dFlex {
+  display: flex;
+}
+
+.flexColumn {
+  flex-direction: column;
+}
+
+.mrSm{
+  margin-right: var(--spacing-sm);
+}
+
+.promotion {
+  margin-bottom: var(--spacing-xs);
+  width: fit-content;
+  color: var(--color-secondary-500);
+}
+
+.pricePromotion {
+  font-size: var(--font-size-xs);
+  text-decoration: line-through;
+}

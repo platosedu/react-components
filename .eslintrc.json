@@ -1,0 +1,8 @@
+{
+  "extends": [
+    "@platosedu/eslint-config/react"
+  ],
+  "env": {
+    "browser": true
+  }
+}
