@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavHeader: simple render test 1`] = `
+<div
+  className="container openFromLeft"
+>
+  <div
+    className="header"
+  >
+    <div
+      className="navContainer"
+    >
+      <div
+        className="headerActions"
+      >
+        <div
+          className="container navIcon"
+        >
+          <button
+            className="icon"
+            onClick={[Function]}
+          >
+            <span
+              className="iconSpan"
+            />
+            <span
+              className="iconSpan"
+            />
+            <span
+              className="iconSpan"
+            />
+            <span
+              className="iconSpan"
+            />
+          </button>
+        </div>
+        <div
+          className="headerLogo"
+        >
+          <figure>
+            <img />
+          </figure>
+        </div>
+      </div>
+      <nav
+        className="nav"
+      >
+        <ul
+          className="navList"
+        >
+          <li
+            className="navItem"
+          >
+            <a
+              className="navItemAnchor"
+              href="#"
+              target="_self"
+            >
+              <span
+                className="typography navItemLabel buttonMD"
+              >
+                conheça a Ahazou
+              </span>
+            </a>
+          </li>
+          <li
+            className="navItem"
+          >
+            <a
+              className="navItemAnchor"
+              href="#"
+              target="_self"
+            >
+              <span
+                className="typography navItemLabel buttonMD"
+              >
+                perguntas frequentes
+              </span>
+            </a>
+          </li>
+          <li
+            className="navItem"
+          >
+            <a
+              className="navItemAnchor"
+              href="#"
+              target="_self"
+            >
+              <span
+                className="typography navItemLabel buttonMD"
+              >
+                baixe o app Ahazou
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+`;
