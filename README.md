@@ -11,6 +11,7 @@ A library of React components by Platos Educational
 ### Import
 
 ```javascript
+import '@platosedu/react-components/dist/reset.css' // import CSS only once, ideally on your src/index.js or equivalent
 import '@platosedu/react-components/dist/index.css' // import CSS only once, ideally on your src/index.js or equivalent
 import '@platosedu/react-components/dist/tokens.css' // import CSS only once, ideally on your src/index.js or equivalent
 import { Button } from '@platosedu/react-components'

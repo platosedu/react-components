@@ -49,7 +49,8 @@ const plugins = [
   }),
   copy({
     targets: [
-      { src: 'src/css/tokens.css', dest: 'dist/' }
+      { src: 'src/css/tokens.css', dest: 'dist/' },
+      { src: 'src/css/reset.css', dest: 'dist/' }
     ]
   }),
   terser(),

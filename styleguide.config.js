@@ -14,6 +14,7 @@ module.exports = {
   skipComponentsWithoutExample: true,
   require: [
     path.join(__dirname, './src/css/tokens.css'),
+    path.join(__dirname, './src/css/reset.css'),
     path.join(__dirname, './node_modules/glider-js/glider.css')
   ],
   propsParser: require('react-docgen-typescript').withCustomConfig(
