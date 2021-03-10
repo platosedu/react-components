@@ -1,6 +1,6 @@
 {
   "name": "@platosedu/react-components",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React components library used across React projects at Platos",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
