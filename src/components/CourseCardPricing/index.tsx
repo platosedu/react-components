@@ -104,7 +104,7 @@ const CourseCardPricing: React.FC<CourseCardPricingProps> = ({
         <Button
           className={style.contentButton}
           onClick={onCoursePlansOpen}
-          variant="link"
+          fillType="outline"
           display="sm"
           label="Ver opções de duração e parcelamento do curso"
           prefixIconComponent={FaBarcode}

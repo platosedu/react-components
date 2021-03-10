@@ -15,6 +15,10 @@ type TypographyVariant =
   | 'bodySM'
   | 'bodyXS'
   | 'bodyXXS'
+  | 'buttonMD'
+  | 'buttonSM'
+  | 'buttonXS'
+  | 'buttonXXS'
 interface TypographyProps {
   className?: string
   innerHTML?: string
@@ -47,7 +51,11 @@ const Typography: React.FC<TypographyProps> = ({
     bodyMD: 'p',
     bodySM: 'p',
     bodyXS: 'p',
-    bodyXXS: 'p'
+    bodyXXS: 'p',
+    buttonMD: 'span',
+    buttonSM: 'span',
+    buttonXS: 'span',
+    buttonXXS: 'span'
   }
 
   const TypographyElement = element || elementMap[variant]

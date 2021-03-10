@@ -2,8 +2,9 @@
 ```js
 <div
   style={{
-    margin: 50,
-    width: 500
+    width: '100%',
+    maxWidth: 500,
+    overflowX: 'scroll'
   }}
 >
   <SimpleTable

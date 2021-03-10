@@ -76,7 +76,7 @@ const Carousel: React.FC<CarouselProps> = ({
           >
             <Button
               display="circular"
-              variant="neutral"
+              variant="neutral-light"
               bordered
               prefixIconComponent={FaAngleLeft}
               aria-hidden="true"
@@ -89,7 +89,7 @@ const Carousel: React.FC<CarouselProps> = ({
           >
             <Button
               display="circular"
-              variant="neutral"
+              variant="neutral-light"
               bordered
               prefixIconComponent={FaAngleRight}
               aria-hidden="true"

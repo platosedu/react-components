@@ -1,8 +1,10 @@
-import React, { useEffect, useCallback } from 'react'
+import React, { useEffect } from 'react'
 import classNames from 'classnames'
-import Button from '../Button'
+import Button from 'components/Button'
+import { MdClose } from 'react-icons/md'
 import style from './style.module.scss'
-import Typography from '../Typography'
+import Typography from 'components/Typography'
+import slugify from 'slugify'
 
 interface ModalProps {
   opened?: boolean
@@ -46,17 +48,6 @@ const Modal: React.FC<ModalProps> = ({
     }
   }
 
-  const handleKeyDown = useCallback(
-    (event) => {
-      if (event.keyCode === 27 && !blocked) {
-        if (onClose) {
-          onClose()
-        }
-      }
-    },
-    [onClose, blocked]
-  )
-
   const containerClassNames = classNames(style.container, className, {
     [style.opened]: Boolean(opened)
   })
@@ -66,28 +57,60 @@ const Modal: React.FC<ModalProps> = ({
       return
     }
 
-    if (opened) {
+    const handlePopState = () => {
+      if (onClose) {
+        onClose()
+      }
+    }
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape' && !blocked) {
+        if (onClose) {
+          onClose()
+        }
+      }
+    }
+
+    const addEvents = () => {
+      const pathname = `#${slugify(title || 'modal')}`
+      window.history.pushState(
+        {},
+        pathname,
+        window.location.pathname + pathname
+      )
+      window.addEventListener('popstate', handlePopState)
+      window.addEventListener('keydown', handleKeyDown)
       document.body.classList.add(style.scrollLocked)
-    } else {
+    }
+
+    const removeEvents = () => {
+      window.history.pushState({}, '', window.location.pathname)
+      window.removeEventListener('popstate', handlePopState)
+      window.removeEventListener('keydown', handleKeyDown)
       document.body.classList.remove(style.scrollLocked)
     }
 
-    return () => {
-      document.body.classList.remove(style.scrollLocked)
+    if (opened) {
+      addEvents()
+    } else {
+      removeEvents()
     }
-  }, [opened])
+
+    return () => {
+      removeEvents()
+    }
+  }, [opened, title, blocked, onClose])
 
   return (
     <div
       className={containerClassNames}
       onClick={handleCloseOverlay}
-      onKeyDown={handleKeyDown}
       role="dialog"
     >
       <div className={classNames(style.wrapper, wrapperClassName)}>
         <Button
           className={classNames(style.closeButton, closeButtonClassName)}
-          prefixIcon="mono_close"
+          prefixIconComponent={MdClose}
           type="button"
           display="circularMicro"
           variant={title ? 'primary' : 'secondary'}

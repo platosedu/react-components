@@ -76,6 +76,10 @@
 }
 
 @media (min-width: 600px) {
+  .container {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
   .wrapper {
     border-radius: var(--border-radius-lg);
     max-height: 80vh;
@@ -89,10 +93,6 @@
 }
 
 @media (min-width: 780px) {
-  .container {
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-
   .wrapper {
     margin: 0 auto;
     box-shadow: var(--shadow-1);

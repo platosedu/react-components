@@ -77,3 +77,23 @@
   line-height: calc(1.75 * var(--font-size-xxs));
   font-weight: var(--font-weight-regular);
 }
+
+.buttonMD {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+}
+
+.buttonSM {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+}
+
+.buttonXS {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+}
+
+.buttonXXS {
+  font-size: var(--font-size-xxs);
+  font-weight: var(--font-weight-medium);
+}

@@ -1,0 +1,152 @@
+.scrollLocked {
+  padding-right: calc(var(--spacing-md) - 1px);
+  overflow-y: hidden;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: var(--size-header-height);
+  position: static;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--depth-sidebar-nav);
+}
+
+.header {
+  width: 100%;
+  box-shadow: var(--shadow-1);
+  background-color: var(--color-white);
+  transition: background-color 200ms linear;
+}
+
+.transparent .header {
+  box-shadow: none;
+  background-color: transparent;
+  transition: background-color 200ms linear;
+}
+
+.navContainer {
+  height: var(--size-header-height);
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerActions {
+  padding: 0 var(--spacing-md);
+  box-sizing: border-box;
+  width: 100%;
+  height: var(--size-header-height);
+  display: flex;
+  align-items: center;
+}
+
+.navIcon {
+  margin-right: var(--spacing-md);
+}
+
+.opened .headerActions {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: calc(var(--depth-sidebar-nav) + 1);
+}
+
+.opened .headerLogo svg {
+  fill: var(--color-white);
+}
+
+.transparent .headerLogo svg {
+  fill: var(--color-white);
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-primary-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 225ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  will-change: transform;
+  z-index: var(--depth-sidebar-nav);
+}
+
+.openFromTop .nav {
+  transform: translateY(-100%);
+}
+
+.openFromLeft .nav {
+  transform: translateX(-100%);
+}
+
+.openFromTop.opened .nav {
+  transform: translateY(0);
+}
+
+.openFromLeft.opened .nav {
+  transform: translateX(0);
+}
+
+.navList {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style: none;
+  width: 100%;
+  height: calc(100vh - var(--size-header-height));
+  padding: var(--size-header-height) var(--spacing-lg) 0;
+}
+
+@media only screen and (min-width: 1024px) {
+  .navIcon {
+    display: none;
+  }
+
+  .headerActions {
+    width: unset;
+    padding: unset;
+    margin-right: var(--spacing-md);
+  }
+
+  .navContainer {
+    width: var(--size-container-width);
+    max-width: calc(100% - var(--spacing-lg));
+  }
+
+  .container .nav {
+    position: unset;
+    top: unset;
+    left: unset;
+    transform: unset;
+    width: unset;
+    height: unset;
+    background-color: unset;
+    flex: 1;
+  }
+
+  .navList {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: unset;
+    height: unset;
+    justify-content: flex-start;
+
+  }
+}

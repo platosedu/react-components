@@ -1,0 +1,62 @@
+.icon {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.icon .iconSpan {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: var(--color-secondary-500);
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+.isCloseIcon .iconSpan {
+  background: var(--color-primary-400-contrast);
+}
+
+.icon .iconSpan:nth-child(1) {
+  top: 0;
+}
+
+.icon .iconSpan:nth-child(2),
+.icon .iconSpan:nth-child(3) {
+  top: 6px;
+}
+
+.icon .iconSpan:nth-child(4) {
+  top: 12px;
+}
+
+.isCloseIcon .iconSpan:nth-child(1) {
+  top: 6px;
+  width: 0%;
+  left: 50%;
+}
+
+.isCloseIcon .iconSpan:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.isCloseIcon .iconSpan:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+.isCloseIcon .iconSpan:nth-child(4) {
+  top: 6px;
+  width: 0%;
+  left: 50%;
+}
