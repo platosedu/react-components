@@ -1,13 +1,12 @@
-import { string } from 'rollup-plugin-string'
+import url from 'postcss-url'
+import copy from 'rollup-plugin-copy'
 import { terser } from 'rollup-plugin-terser'
 import analyze from 'rollup-plugin-analyzer'
-import babel from 'rollup-plugin-babel'
-import filesize from 'rollup-plugin-filesize'
+import fileSize from 'rollup-plugin-filesize'
 import json from '@rollup/plugin-json/dist'
 import postcss from 'rollup-plugin-postcss'
 import progress from 'rollup-plugin-progress'
-import resolve from 'rollup-plugin-node-resolve'
-import typescript from '@rollup/plugin-typescript'
+import typescript from 'rollup-plugin-typescript2'
 import pkg from './package.json'
 
 const input = ['src/index.tsx']
@@ -30,42 +29,35 @@ const globals = {
 }
 
 const plugins = [
-  // progress(),
+  progress(),
   typescript({
-    include: [
-      // Project files
-      './**/*.ts+(|x)'
-      // Files from outside of the project
-      // '../../javascript/**/*.ts+(|x)'
-    ]
+    typescript: require('typescript'),
   }),
-  string({ include: '**/*.html' }),
   json(),
   postcss({
     extract: true,
     autoModules: true,
     include: '**/*\.s(a|c)ss',
     extensions: ['.css', '.scss'],
+    plugins: [
+      url({
+        url: 'inline',
+        maxSize: 10,
+        fallback: 'copy'
+      })
+    ]
   }),
-  resolve({
-    customResolveOptions: {
-      moduleDirectory: 'src',
-    },
-  }),
-  babel({
-    exclude: 'node_modules/**',
-    presets: ['@babel/env', '@babel/preset-react'],
+  copy({
+    targets: [
+      { src: 'src/css/tokens.css', dest: 'dist/' }
+    ]
   }),
   terser(),
   analyze(),
-  filesize(),
+  fileSize(),
 ]
 
 const outputData = [
-  {
-    file: pkg.browser,
-    format: 'umd',
-  },
   {
     file: pkg.main,
     format: 'cjs',
