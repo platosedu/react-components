@@ -1,61 +1,81 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 
 :root {
-    --color-primary-100: #0CEBFF;
-    --color-primary-200: #00E3F8;
-    --color-primary-300: #00D2E5;
-    --color-primary-400: #00C0D2;
-    --color-primary-500: #00AFBF;
-    --color-primary-600: #009EAC;
-    --color-primary-700: #008C99;
-    --color-primary-800: #007A86;
-    --color-primary-900: #006973;
-    --color-primary-100-contrast: #101010;
-    --color-primary-200-contrast: #101010;
-    --color-primary-300-contrast: #101010;
-    --color-primary-400-contrast: #101010;
-    --color-primary-500-contrast: #f0f0f0;
-    --color-primary-600-contrast: #f0f0f0;
-    --color-primary-700-contrast: #f0f0f0;
-    --color-primary-800-contrast: #f0f0f0;
-    --color-primary-900-contrast: #f0f0f0;
-    --color-primary-100-opacity: rgba(12,235,255,0.2);
-    --color-primary-200-opacity: rgba(0,227,248,0.2);
-    --color-primary-300-opacity: rgba(0,210,229,0.2);
-    --color-primary-400-opacity: rgba(0,192,210,0.2);
-    --color-primary-500-opacity: rgba(0,175,191,0.2);
-    --color-primary-600-opacity: rgba(0,158,172,0.2);
-    --color-primary-700-opacity: rgba(0,140,153,0.2);
-    --color-primary-800-opacity: rgba(0,122,134,0.2);
-    --color-primary-900-opacity: rgba(0,105,115,0.2);
+  --color-primary-100: #0CEBFF;
+  --color-primary-200: #00E3F8;
+  --color-primary-300: #00D2E5;
+  --color-primary-400: #00C0D2;
+  --color-primary-500: #00AFBF;
+  --color-primary-600: #009EAC;
+  --color-primary-700: #008C99;
+  --color-primary-800: #007A86;
+  --color-primary-900: #006973;
+  --color-primary-100-contrast: #101010;
+  --color-primary-200-contrast: #101010;
+  --color-primary-300-contrast: #101010;
+  --color-primary-400-contrast: #101010;
+  --color-primary-500-contrast: #f0f0f0;
+  --color-primary-600-contrast: #f0f0f0;
+  --color-primary-700-contrast: #f0f0f0;
+  --color-primary-800-contrast: #f0f0f0;
+  --color-primary-900-contrast: #f0f0f0;
+  --color-primary-100-opacity: rgba(12,235,255,0.2);
+  --color-primary-200-opacity: rgba(0,227,248,0.2);
+  --color-primary-300-opacity: rgba(0,210,229,0.2);
+  --color-primary-400-opacity: rgba(0,192,210,0.2);
+  --color-primary-500-opacity: rgba(0,175,191,0.2);
+  --color-primary-600-opacity: rgba(0,158,172,0.2);
+  --color-primary-700-opacity: rgba(0,140,153,0.2);
+  --color-primary-800-opacity: rgba(0,122,134,0.2);
+  --color-primary-900-opacity: rgba(0,105,115,0.2);
 
-    --color-secondary-100: #F6CABF;
-    --color-secondary-200: #F2B3A3;
-    --color-secondary-300: #EF9C88;
-    --color-secondary-400: #EB866C;
-    --color-secondary-500: #E76F51;
-    --color-secondary-600: #E35836;
-    --color-secondary-700: #DB441E;
-    --color-secondary-800: #C03C1A;
-    --color-secondary-900: #A53317;
-    --color-secondary-100-contrast: #101010;
-    --color-secondary-200-contrast: #101010;
-    --color-secondary-300-contrast: #101010;
-    --color-secondary-400-contrast: #101010;
-    --color-secondary-500-contrast: #f0f0f0;
-    --color-secondary-600-contrast: #f0f0f0;
-    --color-secondary-700-contrast: #f0f0f0;
-    --color-secondary-800-contrast: #f0f0f0;
-    --color-secondary-900-contrast: #f0f0f0;
-    --color-secondary-100-opacity: rgba(246,202,191,0.2);
-    --color-secondary-200-opacity: rgba(242,179,163,0.2);
-    --color-secondary-300-opacity: rgba(239,156,136,0.2);
-    --color-secondary-400-opacity: rgba(235,134,108,0.2);
-    --color-secondary-500-opacity: rgba(231,111,81,0.2);
-    --color-secondary-600-opacity: rgba(227,88,54,0.2);
-    --color-secondary-700-opacity: rgba(219,68,30,0.2);
-    --color-secondary-800-opacity: rgba(192,60,26,0.2);
-    --color-secondary-900-opacity: rgba(165,51,23,0.2);
+  --color-secondary-100: #FF8A0C;
+  --color-secondary-200: #F88100;
+  --color-secondary-300: #E57700;
+  --color-secondary-400: #D26D00;
+  --color-secondary-500: #BF6300;
+  --color-secondary-600: #AC5900;
+  --color-secondary-700: #994F00;
+  --color-secondary-800: #864500;
+  --color-secondary-900: #733B00;
+  --color-secondary-100-contrast: #101010;
+  --color-secondary-200-contrast: #101010;
+  --color-secondary-300-contrast: #101010;
+  --color-secondary-400-contrast: #f0f0f0;
+  --color-secondary-500-contrast: #f0f0f0;
+  --color-secondary-600-contrast: #f0f0f0;
+  --color-secondary-700-contrast: #f0f0f0;
+  --color-secondary-800-contrast: #f0f0f0;
+  --color-secondary-900-contrast: #f0f0f0;
+  --color-secondary-100-opacity: rgba(255,138,12,0.2);
+  --color-secondary-200-opacity: rgba(248,129,0,0.2);
+  --color-secondary-300-opacity: rgba(229,119,0,0.2);
+  --color-secondary-400-opacity: rgba(210,109,0,0.2);
+  --color-secondary-500-opacity: rgba(191,99,0,0.2);
+  --color-secondary-600-opacity: rgba(172,89,0,0.2);
+  --color-secondary-700-opacity: rgba(153,79,0,0.2);
+  --color-secondary-800-opacity: rgba(134,69,0,0.2);
+  --color-secondary-900-opacity: rgba(115,59,0,0.2);
+
+  --color-secondary-100-contrast: #101010;
+  --color-secondary-200-contrast: #101010;
+  --color-secondary-300-contrast: #101010;
+  --color-secondary-400-contrast: #101010;
+  --color-secondary-500-contrast: #f0f0f0;
+  --color-secondary-600-contrast: #f0f0f0;
+  --color-secondary-700-contrast: #f0f0f0;
+  --color-secondary-800-contrast: #f0f0f0;
+  --color-secondary-900-contrast: #f0f0f0;
+
+  --color-secondary-100-opacity: rgba(227,232,173,0.2);
+  --color-secondary-200-opacity: rgba(219,225,150,0.2);
+  --color-secondary-300-opacity: rgba(211,219,128,0.2);
+  --color-secondary-400-opacity: rgba(204,212,105,0.2);
+  --color-secondary-500-opacity: rgba(196,206,83,0.2);
+  --color-secondary-600-opacity: rgba(188,200,61,0.2);
+  --color-secondary-700-opacity: rgba(169,180,51,0.2);
+  --color-secondary-800-opacity: rgba(148,157,45,0.2);
+  --color-secondary-900-opacity: rgba(127,135,38,0.2);
 
   --color-neutral-dark-100: #5F5F5F;
   --color-neutral-dark-200: #585858;
@@ -275,8 +295,8 @@
   --size-circular-button: 64px;
   --size-circular-micro-button: 32px;
 
-  --size-header-height-desktop: 100px;
-  --size-header-height-mobile: 66px;
+  --size-header-height: 66px;
+  --size-nav-item-height: 66px;
   --size-container-width: 1280px;
 
   /* Checkbox */
@@ -311,13 +331,13 @@
   --font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
 
   /* font size */
-  --font-size-xxs: 1rem; // 10px
-  --font-size-xs: 1.2rem; // 12px
-  --font-size-sm: 1.4rem; // 14px
-  --font-size-md: 1.6rem; // 16px
-  --font-size-lg: 1.8rem; // 18px
-  --font-size-xl: 2.7rem; // 27px
-  --font-size-xxl: 3.8rem; // 38px
+  --font-size-xxs: 1rem;
+  --font-size-xs: 1.2rem;
+  --font-size-sm: 1.4rem;
+  --font-size-md: 1.6rem;
+  --font-size-lg: 1.8rem;
+  --font-size-xl: 2.7rem;
+  --font-size-xxl: 3.8rem;
 
   /* font weight */
   --font-weight-light: 300;
@@ -340,6 +360,7 @@
   --depth-card-course-pricing: 1;
   --depth-dropdown-menu: 2;
   --depth-header: 2;
+  --depth-sidebar-nav: 3;
   --depth-side-menu: 3;
   --depth-modal: 3;
   --depth-tooltip: 4;
