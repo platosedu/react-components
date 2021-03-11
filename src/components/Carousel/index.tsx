@@ -42,6 +42,8 @@ const Carousel: React.FC<CarouselProps> = ({
       }
     }
 
+    // eslint-disable-next-line
+    // @ts-ignore
     const glider = new Glider(elementRef.current, settings)
 
     setIsBiggerThanContainer(glider.trackWidth > glider.containerWidth)
