@@ -1,0 +1,26 @@
+{
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "extends": "stylelint-config-recommended-scss",
+  "rules": {
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": [
+          "global"
+        ]
+      }
+    ],
+    "no-descending-specificity": null,
+    "selector-max-type": [
+      0, {
+      "ignore": [
+        "child",
+        "compounded",
+        "descendant",
+        "next-sibling"
+      ]
+    }]
+  }
+}

@@ -11,7 +11,7 @@ html {
   font-size: 62.5%;
 }
 
-html, body, #__next {
+html, body {
   height: 100%;
 }
 

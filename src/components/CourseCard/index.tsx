@@ -67,9 +67,7 @@ const CourseCard: React.FC<CourseCardProps> = ({
   const CourseCardElement: React.ElementType = element
 
   return (
-    <CourseCardElement
-      {...rest}
-    >
+    <CourseCardElement {...rest}>
       <a
         href={`/cursos/${id}/${slugify(title)}`}
         className={classNames(style.courseCard, className)}

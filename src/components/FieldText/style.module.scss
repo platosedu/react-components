@@ -135,10 +135,6 @@
   left: calc(var(--spacing-md) - 2px);
 }
 
-.hasPrefixIcon .label  {
-  left: calc(var(--spacing-md) + var(--size-icon-sm) + var(--spacing-md));
-}
-
 .focused .label {
   color: var(--color-primary-500);
 }

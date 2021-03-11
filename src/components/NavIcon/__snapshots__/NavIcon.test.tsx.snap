@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavIcon: simple render test 1`] = `
+<div
+  className="container"
+>
+  <button
+    className="icon"
+    onClick={[Function]}
+  >
+    <span
+      className="iconSpan"
+    />
+    <span
+      className="iconSpan"
+    />
+    <span
+      className="iconSpan"
+    />
+    <span
+      className="iconSpan"
+    />
+  </button>
+</div>
+`;

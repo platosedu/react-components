@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { ReactElement, useState } from 'react'
 import classNames from 'classnames'
 import Icon, { IconSlugsType } from '../Icon'
 import { IconType } from 'react-icons'
@@ -67,7 +67,7 @@ const FieldText: React.FC<FieldTextProps> = ({
   const [focused, setFocused] = useState(false)
   const inputIdFormatted = inputId || `field-${name}`
 
-  const handleFocus = (e: React.FocusEvent<HTMLInputElement>) => {
+  const handleFocus = (e: React.FocusEvent<HTMLInputElement>): void => {
     if (onFocus) {
       onFocus(e)
     }
@@ -75,7 +75,7 @@ const FieldText: React.FC<FieldTextProps> = ({
     setFocused(true)
   }
 
-  const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
+  const handleBlur = (e: React.FocusEvent<HTMLInputElement>): void => {
     if (onBlur) {
       onBlur(e)
     }
@@ -129,7 +129,7 @@ const FieldText: React.FC<FieldTextProps> = ({
             readOnly={readOnly}
             // maskChar={null}
           >
-            {(inputProps: InputProps) => (
+            {(inputProps: InputProps): ReactElement => (
               <input
                 {...inputProps}
                 className={style.input}

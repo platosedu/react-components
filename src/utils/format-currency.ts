@@ -1,4 +1,4 @@
-export default function formatCurrency(value: number | string) {
+export default function formatCurrency(value: number | string): string {
   let numberValue: number
 
   if (typeof value === 'string') {
