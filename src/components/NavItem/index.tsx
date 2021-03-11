@@ -9,12 +9,11 @@ interface NavItemProps {
   icon: IconSlugsType
   label: string
   url: string
-  onClick: () => void
+  onClick?: () => void
   transparent?: boolean
   target?: '_blank' | '_self' | '_parent' | '_top'
-  isActive: boolean
+  isActive?: boolean
   element?: React.ElementType
-
 }
 
 const NavItem: React.FC<NavItemProps> = ({
@@ -26,13 +25,13 @@ const NavItem: React.FC<NavItemProps> = ({
   children,
   transparent,
   target = '_self',
-  isActive,
+  isActive = false,
   element: Element,
   ...rest
 }) => {
   const AnchorElement = Element || (url ? 'a' : 'span')
   const itemClassNames = classNames(style.navItem, className, {
-    [style.transparent]: transparent,
+    [style.transparent]: transparent
   })
 
   if (children) {
@@ -53,7 +52,7 @@ const NavItem: React.FC<NavItemProps> = ({
           element="span"
           variant="buttonMD"
           className={classNames(style.navItemLabel, {
-            [style.navItemActive]: isActive,
+            [style.navItemActive]: isActive
           })}
         >
           {label}

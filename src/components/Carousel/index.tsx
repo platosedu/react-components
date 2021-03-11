@@ -42,13 +42,11 @@ const Carousel: React.FC<CarouselProps> = ({
       }
     }
 
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    //@ts-ignore
     const glider = new Glider(elementRef.current, settings)
 
     setIsBiggerThanContainer(glider.trackWidth > glider.containerWidth)
 
-    return () => {
+    return (): void => {
       glider.destroy()
     }
 

@@ -8,11 +8,16 @@ interface NavIconProps {
   onClick: () => void
 }
 
-const NavIcon: React.FC<NavIconProps> = ({ className, isCloseIcon, onClick, ...rest }) => {
+const NavIcon: React.FC<NavIconProps> = ({
+  className,
+  isCloseIcon,
+  onClick,
+  ...rest
+}) => {
   return (
     <div
       className={classNames(style.container, className, {
-        [style.isCloseIcon]: Boolean(isCloseIcon),
+        [style.isCloseIcon]: Boolean(isCloseIcon)
       })}
     >
       <button className={style.icon} onClick={onClick} {...rest}>

@@ -31,8 +31,8 @@ const NavHeader: React.FC<NavHeaderProps> = ({
     {
       [style.opened]: navOpened,
       [style.isFixed]: isFixed,
-      [style.transparent]: transparent,
-    },
+      [style.transparent]: transparent
+    }
   )
 
   useEffect(() => {
@@ -46,7 +46,7 @@ const NavHeader: React.FC<NavHeaderProps> = ({
       document.body.classList.remove(style.scrollLocked)
     }
 
-    return () => {
+    return (): void => {
       document.body.classList.remove(style.scrollLocked)
     }
   }, [navOpened])
@@ -56,7 +56,11 @@ const NavHeader: React.FC<NavHeaderProps> = ({
       <div className={style.header}>
         <div className={style.navContainer}>
           <div className={style.headerActions}>
-            <NavIcon isCloseIcon={navOpened} className={style.navIcon} onClick={onNavClick} />
+            <NavIcon
+              isCloseIcon={navOpened}
+              className={style.navIcon}
+              onClick={onNavClick}
+            />
 
             <div className={style.headerLogo}>
               <figure>

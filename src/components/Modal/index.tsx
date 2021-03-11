@@ -28,7 +28,9 @@ const Modal: React.FC<ModalProps> = ({
   closeButtonClassName,
   title
 }) => {
-  const handleCloseOverlay = (event: React.MouseEvent<HTMLDivElement>) => {
+  const handleCloseOverlay = (
+    event: React.MouseEvent<HTMLDivElement>
+  ): void => {
     if (!(event.target instanceof HTMLDivElement)) {
       return
     }
@@ -57,13 +59,13 @@ const Modal: React.FC<ModalProps> = ({
       return
     }
 
-    const handlePopState = () => {
+    const handlePopState = (): void => {
       if (onClose) {
         onClose()
       }
     }
 
-    const handleKeyDown = (event: KeyboardEvent) => {
+    const handleKeyDown = (event: KeyboardEvent): void => {
       if (event.key === 'Escape' && !blocked) {
         if (onClose) {
           onClose()
@@ -71,7 +73,7 @@ const Modal: React.FC<ModalProps> = ({
       }
     }
 
-    const addEvents = () => {
+    const addEvents = (): void => {
       const pathname = `#${slugify(title || 'modal')}`
       window.history.pushState(
         {},
@@ -83,7 +85,7 @@ const Modal: React.FC<ModalProps> = ({
       document.body.classList.add(style.scrollLocked)
     }
 
-    const removeEvents = () => {
+    const removeEvents = (): void => {
       window.history.pushState({}, '', window.location.pathname)
       window.removeEventListener('popstate', handlePopState)
       window.removeEventListener('keydown', handleKeyDown)
@@ -96,7 +98,7 @@ const Modal: React.FC<ModalProps> = ({
       removeEvents()
     }
 
-    return () => {
+    return (): void => {
       removeEvents()
     }
   }, [opened, title, blocked, onClose])

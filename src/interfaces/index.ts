@@ -9,6 +9,13 @@ import { IconSlugsType } from '../components/Icon'
 export interface StringMap {
   [key: string]: string
 }
+
+export interface Polo {
+  name: string
+  address: string
+  email: string
+  phone: string
+}
 export interface Tenant {
   polos?: Polo[]
   name: string
@@ -27,13 +34,6 @@ export interface CoursePlan {
   mode: CoursePlanMode
   installment: number
   total: number
-}
-
-export interface CourseArea {
-  id: string
-  name: string
-  courses: Course[]
-  iconPath: IconSlugsType
 }
 
 export interface CourseLocation {
@@ -57,6 +57,12 @@ export interface CourseAdvantage {
   titleSuffix: string
 }
 
+export interface CourseArea {
+  id: string
+  name: string
+  courses?: Course[]
+  iconPath: IconSlugsType
+}
 export interface Course {
   imagePath: string
   bannerImagePath: string
@@ -67,7 +73,7 @@ export interface Course {
   description: string
   startAt?: string
   duration?: string
-  area: CourseArea
+  area?: CourseArea
   location?: CourseLocation
   targetAudienceText?: string
   topicsText: string
@@ -77,14 +83,6 @@ export interface Course {
   mode?: CoursePlanMode
   installment?: string
 }
-
-export interface Polo {
-  name: string
-  address: string
-  email: string
-  phone: string
-}
-
 export interface FormAddress {
   zipCode: string
   state: string
@@ -128,6 +126,7 @@ declare global {
     ga: any
   }
 }
+
 export interface ItemFaq {
   title: string
   content: string[]

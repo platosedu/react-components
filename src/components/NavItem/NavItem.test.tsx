@@ -6,7 +6,13 @@ import NavItem from './index'
 
 test('NavItem: simple render test', () => {
   const component = renderer.create(
-    <NavItem url="#" label="baixe o app Ahazou" icon="mono_arrow_down" active target="_blank" />,
+    <NavItem
+      url="#"
+      label="baixe o app Ahazou"
+      icon="mono_book"
+      target="_blank"
+      isActive
+    />
   )
 
   const tree = component.toJSON()

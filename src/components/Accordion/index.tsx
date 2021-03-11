@@ -19,14 +19,14 @@ const Accordion: React.FC<AccordionProps> = ({
 }) => {
   const [isAccordionOpened, setIsAccordionOpened] = useState(false)
 
-  const toggleAccordion = () => {
+  const toggleAccordion = (): void => {
     setIsAccordionOpened(!isAccordionOpened)
   }
 
   return (
     <div
       className={classNames(style.accordion, className)}
-      onClick={() => toggleAccordion()}
+      onClick={toggleAccordion}
     >
       <div className={classNames(style.dFlex, style.alignItemsCenter)}>
         <CircledInfo
@@ -58,4 +58,5 @@ const Accordion: React.FC<AccordionProps> = ({
     </div>
   )
 }
+
 export default Accordion

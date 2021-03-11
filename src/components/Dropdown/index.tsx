@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 import classNames from 'classnames'
 import style from './style.module.scss'
 import Icon from '../Icon'
@@ -10,6 +10,10 @@ export interface DropdownOptionsParam {
   label: string
 }
 
+interface DropdownValueType {
+  value: string | number
+  label: string | number
+}
 export interface DropdownProps {
   options?: DropdownOptionsParam[]
   placeholder?: string
@@ -19,7 +23,7 @@ export interface DropdownProps {
   error?: string | null
   hint?: string | null
   name?: string
-  value?: { value: string | number; label: string } | null
+  value?: DropdownValueType | null
   isSearchable?: boolean
   isClearable?: boolean
   disabled?: boolean
@@ -40,7 +44,7 @@ const Dropdown: React.FC<DropdownProps> = ({
   onChange
 }) => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const DropdownIndicator = (props: IndicatorProps<any, any>) => {
+  const DropdownIndicator = (props: IndicatorProps<any, any>): ReactElement => {
     return (
       <components.DropdownIndicator {...props}>
         <Icon icon="mono_arrow_dropdown" size="xxs" className={style.icon} />
@@ -64,7 +68,7 @@ const Dropdown: React.FC<DropdownProps> = ({
         name={name}
         classNamePrefix={'dropdown'}
         className={style.select}
-        onChange={(option) => {
+        onChange={(option): void => {
           if (onChange) {
             onChange(option)
           }
@@ -75,7 +79,7 @@ const Dropdown: React.FC<DropdownProps> = ({
         isClearable={isClearable}
         components={{ DropdownIndicator }}
         options={options}
-        noOptionsMessage={() => 'Sem opções'}
+        noOptionsMessage={(): string => 'Sem opções'}
       />
       <p className={style.supportText}>{error ? error : ''}</p>
     </div>

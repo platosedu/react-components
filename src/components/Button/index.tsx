@@ -6,9 +6,16 @@ import LoadingIcon from '../LoadingIcon'
 import style from './style.module.scss'
 
 type ButtonDisplay = 'lg' | 'md' | 'sm' | 'circular' | 'circularMicro'
-type ButtonVariant = 'primary' | 'secondary' | 'neutral-dark' | 'neutral-light' | 'error' | 'alert' | 'info' | 'success'
+type ButtonVariant =
+  | 'primary'
+  | 'secondary'
+  | 'neutral-dark'
+  | 'neutral-light'
+  | 'error'
+  | 'alert'
+  | 'info'
+  | 'success'
 type ButtonFillType = 'fill' | 'outline'
-
 
 interface ButtonLabelProps {
   display: ButtonDisplay
@@ -46,7 +53,7 @@ interface ButtonProps {
   fillType?: ButtonFillType
 
   /** Event to be called when user click on button */
-  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void
+  onClick?: () => void
 
   /** Disable button */
   disabled?: boolean
