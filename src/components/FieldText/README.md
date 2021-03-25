@@ -1,4 +1,4 @@
-### Normal without label
+### Normal
 ```js
 const [value, setValue] = React.useState('')
 
@@ -12,7 +12,25 @@ const handleChange = (e) => {
     label="Nome completo"
     value={value}
     onChange={handleChange}
-    required
+  />
+</div>
+```
+
+### Textarea
+```js
+const [value, setValue] = React.useState('')
+
+const handleChange = (e) => {
+  setValue(e.target.value)
+}
+
+;<div style={{ backgroundColor: "#E0E0E0", padding: "1rem" }}>
+  <FieldText
+    name="name-0"
+    label="Mensagem"
+    value={value}
+    onChange={handleChange}
+    type="textarea"
   />
 </div>
 ```

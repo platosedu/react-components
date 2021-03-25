@@ -20,7 +20,14 @@ export interface FieldTextProps {
   required?: boolean
   bordered?: boolean
   error?: string | null
-  type?: 'text' | 'password' | 'email' | 'search' | 'number' | 'color'
+  type?:
+    | 'text'
+    | 'textarea'
+    | 'password'
+    | 'email'
+    | 'search'
+    | 'number'
+    | 'color'
   autocomplete?: 'on' | 'off'
   prefixIcon?: IconSlugsType
   prefixIconPath?: string
@@ -28,9 +35,21 @@ export interface FieldTextProps {
   suffixIcon?: IconSlugsType
   suffixIconPath?: string
   suffixIconComponent?: IconType
-  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void
-  onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void
-  onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void
+  onChange?: (
+    event:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLTextAreaElement>
+  ) => void
+  onFocus?: (
+    event:
+      | React.FocusEvent<HTMLInputElement>
+      | React.FocusEvent<HTMLTextAreaElement>
+  ) => void
+  onBlur?: (
+    event:
+      | React.FocusEvent<HTMLInputElement>
+      | React.FocusEvent<HTMLTextAreaElement>
+  ) => void
   onPrefixIconClick?: (event: React.MouseEvent<HTMLButtonElement>) => void
   onSuffixIconClick?: (event: React.MouseEvent<HTMLButtonElement>) => void
 }
@@ -62,12 +81,19 @@ const FieldText: React.FC<FieldTextProps> = ({
   suffixIconComponent,
   onSuffixIconClick,
   mask,
-  value
+  value,
+  ...props
 }) => {
+  const isTextarea = type === 'textarea'
   const [focused, setFocused] = useState(false)
   const inputIdFormatted = inputId || `field-${name}`
+  const InputElement = isTextarea ? 'textarea' : 'input'
 
-  const handleFocus = (e: React.FocusEvent<HTMLInputElement>): void => {
+  const handleFocus = (
+    e:
+      | React.FocusEvent<HTMLInputElement>
+      | React.FocusEvent<HTMLTextAreaElement>
+  ): void => {
     if (onFocus) {
       onFocus(e)
     }
@@ -75,7 +101,11 @@ const FieldText: React.FC<FieldTextProps> = ({
     setFocused(true)
   }
 
-  const handleBlur = (e: React.FocusEvent<HTMLInputElement>): void => {
+  const handleBlur = (
+    e:
+      | React.FocusEvent<HTMLInputElement>
+      | React.FocusEvent<HTMLTextAreaElement>
+  ): void => {
     if (onBlur) {
       onBlur(e)
     }
@@ -99,7 +129,8 @@ const FieldText: React.FC<FieldTextProps> = ({
     [style.hasPlaceholder]: Boolean(placeholder),
     [style.disabled]: Boolean(disabled),
     [style.hasPrefixIcon]: hasPrefixIcon,
-    [style.hasSuffixIcon]: hasSuffixIcon
+    [style.hasSuffixIcon]: hasSuffixIcon,
+    [style.isTextarea]: isTextarea
   })
 
   return (
@@ -141,11 +172,12 @@ const FieldText: React.FC<FieldTextProps> = ({
                 placeholder={placeholder}
                 required={required}
                 onChange={onChange}
+                {...props}
               />
             )}
           </InputMask>
         ) : (
-          <input
+          <InputElement
             className={style.input}
             id={inputIdFormatted}
             tabIndex={tabIndex}
@@ -160,6 +192,7 @@ const FieldText: React.FC<FieldTextProps> = ({
             onBlur={handleBlur}
             disabled={disabled}
             readOnly={readOnly}
+            {...props}
           />
         )}
 

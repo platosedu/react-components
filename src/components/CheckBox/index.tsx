@@ -5,6 +5,7 @@ import classNames from 'classnames'
 export interface CheckBoxProps {
   value?: string | number
   onChange?: React.ChangeEventHandler<HTMLInputElement>
+  className?: string
   id?: string
   name?: string
   label: string
@@ -16,6 +17,7 @@ export interface CheckBoxProps {
 }
 
 const CheckBox: React.FC<CheckBoxProps> = ({
+  className,
   id,
   value,
   name,
@@ -41,7 +43,7 @@ const CheckBox: React.FC<CheckBoxProps> = ({
     sizeText = 'textLg'
   }
 
-  const containerClassNames = classNames(style.checkbox, {
+  const containerClassNames = classNames(style.checkbox, className, {
     [style.error]: Boolean(error)
   })
 
