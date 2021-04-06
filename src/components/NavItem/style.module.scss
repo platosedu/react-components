@@ -7,31 +7,32 @@
   cursor: pointer;
   text-decoration: none;
   color: var(--color-primary-400);
-  font-size: var(--font-size-xs);
   display: flex;
   align-items: center;
   height: var(--size-nav-item-height);
+  text-transform: uppercase;
 }
 
 .navItemAnchor:hover {
   color: var(--color-primary-500);
 }
 
-.navItemIcon svg {
-  fill: var(--color-secondary-500);
+.navItemIcon {
+  margin-right: var(--spacing-sm);
 }
 
-.navItemAnchor:hover .navItemIcon svg {
+.navItemIcon svg {
   fill: var(--color-primary-600);
 }
 
 .navItem .navItemLabel {
-  font-size: var(--font-size-md);
-  padding-left: var(--spacing-md);
   align-self: center;
-  color: var(--color-primary-400-contrast);
+  color: var(--color-neutral-dark-300);
+  text-decoration: none;
+  font-family: var(--font-family);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
   margin: unset;
-  letter-spacing: 1px;
 }
 
 .navItemActive {
@@ -43,7 +44,7 @@
   width: 100%;
   height: 2px;
   display: block;
-  background-color: var(--color-secondary-500);
+  background-color: var(--color-secondary-200);
   position: absolute;
   margin-top: calc(var(--spacing-sm) / 2);
 }
@@ -57,31 +58,18 @@
     padding: var(--spacing-sm) var(--spacing-md);
   }
 
-  .navItemLabel {
+  .navItem .navItemLabel {
     padding-left: unset;
-    font-size: var(--font-size-xs);
-    color: var(--color-primary-400);
     transition: color 200ms linear;
+    font-size: var(--font-size-xxs);
   }
 
   .navItemLabel:hover {
     color: var(--color-primary-500);
   }
 
-  .transparent .navItemLabel {
-    color: var(--color-secondary-500);
-    transition: color 200ms linear;
-  }
-
-  .transparent .navItemLabel:hover {
-    color: var(--color-secondary-400);
-  }
-
   .navItemActive::after {
     background-color: var(--color-primary-300);
   }
 
-  .transparent .navItemActive::after {
-    background-color: var(--color-secondary-300);
-  }
 }
