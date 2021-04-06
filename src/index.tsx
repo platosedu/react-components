@@ -14,7 +14,6 @@ import LoadingIcon from './components/LoadingIcon'
 import Modal from './components/Modal'
 import RadioButton from './components/RadioButton'
 import SimpleTable from './components/SimpleTable'
-import SubHeader from './components/SubHeader'
 import NavHeader from './components/NavHeader'
 import NavItem from './components/NavItem'
 import Typography from './components/Typography'
@@ -36,7 +35,6 @@ export {
   Modal,
   RadioButton,
   SimpleTable,
-  SubHeader,
   NavHeader,
   NavItem,
   Typography
