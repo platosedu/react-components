@@ -21,13 +21,14 @@
 }
 
 .openedContent {
-  max-height: var(--max-height);
+  max-height: 350px;
   transition: all .1s cubic-bezier(1, 1, 1, 0);
   margin-top: var(--spacing-md);
+  overflow: auto;
 }
 
 .closedContent {
-  max-height: var(--min-height);
+  max-height: 0;
   transition: all .1s cubic-bezier(0, 1, 0, 1);
   overflow: hidden;
 }
