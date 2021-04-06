@@ -1,20 +1,22 @@
-.courseCard {
+.productCard {
   display: flex;
   flex-direction: column;
+  background-color: var(--color-white);
   border: 1px solid var(--color-neutral-light-100);
   border-radius: var(--border-radius-sm);
-  width: var(--course-card-width);
+  width: var(--size-product-card-width);
   cursor: pointer;
   margin-bottom: var(--spacing-sm);
+  margin-right: var(--spacing-sm);
 
   @media only screen and (max-width: 360px) {
-    min-width: var(--course-card-width);
+    min-width: var(--size-product-card-width);
   }
 }
 
 .figure {
   width: 100%;
-  height: var(--course-card-img-height);
+  height: var(--size-product-card-img-height);
 }
 
 .img {

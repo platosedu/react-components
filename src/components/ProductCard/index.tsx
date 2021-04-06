@@ -3,11 +3,11 @@ import classNames from 'classnames'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import formatCurrency from 'utils/format-currency'
 import { CoursePlan } from 'interfaces'
-import style from './style.module.scss'
-import Typography from '../Typography'
 import slugify from 'slugify'
+import Typography from '../Typography'
+import style from './style.module.scss'
 
-interface CourseCardProps {
+interface ProductCardProps {
   /** Custom className */
   className?: string
 
@@ -17,7 +17,7 @@ interface CourseCardProps {
   /** Course title */
   title: string
 
-  /** Course description ex: `☕` */
+  /** Course description */
   description: string
 
   /** Course plan */
@@ -42,7 +42,7 @@ interface CourseCardProps {
   id?: string
 }
 
-const CourseCard: React.FC<CourseCardProps> = ({
+const ProductCard: React.FC<ProductCardProps> = ({
   className,
   image,
   title,
@@ -64,14 +64,11 @@ const CourseCard: React.FC<CourseCardProps> = ({
   }
 
   const isPromotion = originalInstallmentPrice > currentInstallmentPrice
-  const CourseCardElement: React.ElementType = element
+  const ProductCardElement: React.ElementType = element
 
   return (
-    <CourseCardElement {...rest}>
-      <a
-        href={`/cursos/${id}/${slugify(title)}`}
-        className={classNames(style.courseCard, className)}
-      >
+    <ProductCardElement {...rest}>
+      <div className={classNames(style.productCard, className)}>
         <figure className={style.figure}>
           <LazyLoadImage src={image} alt={title} className={style.img} />
         </figure>
@@ -143,8 +140,9 @@ const CourseCard: React.FC<CourseCardProps> = ({
             </div>
           </div>
         </div>
-      </a>
-    </CourseCardElement>
+      </div>
+    </ProductCardElement>
   )
 }
-export default CourseCard
+
+export default ProductCard

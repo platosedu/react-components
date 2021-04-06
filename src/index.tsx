@@ -4,8 +4,7 @@ import Card from './components/Card'
 import Carousel from './components/Carousel'
 import CheckBox from './components/CheckBox'
 import CircledInfo from './components/CircledInfo'
-import CourseCard from './components/CourseCard'
-import CourseCardPricing from './components/CourseCardPricing'
+import ProductCard from './components/ProductCard'
 import Dropdown from './components/Dropdown'
 import FieldText from './components/FieldText'
 import Icon from './components/Icon'
@@ -25,8 +24,7 @@ export {
   Carousel,
   CheckBox,
   CircledInfo,
-  CourseCard,
-  CourseCardPricing,
+  ProductCard,
   Dropdown,
   FieldText,
   Icon,

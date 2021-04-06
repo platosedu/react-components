@@ -23,6 +23,11 @@
   --size-nav-item-height: 46px;
   --size-container-width: 1280px;
 
+  /* Product Card */
+  --size-product-card-width: 295px;
+  --size-product-card-img-height: 158px;
+
+
   /* Checkbox */
   --size-sm-checkbox-height: 13px;
   --size-md-checkbox-height: 18px;
