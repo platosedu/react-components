@@ -137,7 +137,7 @@ const variants = ['primary', 'secondary', 'neutral-dark', 'neutral-light', 'erro
 
 ### Loading state
 ```tsx
-const variants = ['primary', 'secondary', 'neutral-dark', 'neutral-light', 'error', 'alert', 'info', 'success'];
+const variants = ['primary', 'secondary', 'error', 'info', 'success'];
 
 const [loading, setLoading] = React.useState(true)
 
@@ -157,12 +157,22 @@ React.useEffect(() => {
   }}>
     <>
       {variants.map(variant => (
-        <Button loading={loading} display="md" prefixIcon="mono_university_hat" key={variant} variant={variant} label={variant} />
+        <Button loading={loading} display="md" key={variant} variant={variant} label={variant} />
+      ))}
+    </>
+    <>
+      {variants.map(variant => (
+        <Button loading={loading} display="md" fillType="outline" key={variant} variant={variant} label={variant} />
       ))}
     </>
     <>
       {variants.map(variant => (
         <Button loading={loading} display="circular" prefixIcon="mono_university_hat" key={variant} variant={variant} label={variant} />
+      ))}
+    </>
+    <>
+      {variants.map(variant => (
+        <Button loading={loading} display="circularMicro" prefixIcon="mono_university_hat" key={variant} variant={variant} label={variant} />
       ))}
     </>
   </div>
