@@ -15,7 +15,7 @@ type ButtonVariant =
   | 'alert'
   | 'info'
   | 'success'
-type ButtonFillType = 'fill' | 'outline'
+type ButtonFillType = 'fill' | 'outline' | 'onlyText'
 
 interface ButtonLabelProps {
   display: ButtonDisplay

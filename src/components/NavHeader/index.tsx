@@ -5,23 +5,25 @@ import NavIcon from 'components/NavIcon'
 import capitalize from 'utils/capitalize'
 
 interface NavHeaderProps {
-  transparent?: boolean
+  isTransparent?: boolean
   isFixed?: boolean
   className?: string
   openFrom?: 'top' | 'left'
-  logoPath: string
   navOpened: boolean
+  logoComponent?: React.ElementType
+  extraContentComponent: React.ElementType
   onNavClick: () => void
 }
 
 const NavHeader: React.FC<NavHeaderProps> = ({
   children,
-  transparent = false,
+  isTransparent = false,
   isFixed = false,
   className,
   openFrom = 'left',
-  logoPath,
   navOpened,
+  logoComponent: LogoComponent,
+  extraContentComponent: ExtraContent,
   onNavClick
 }) => {
   const containerClassnames = classNames(
@@ -30,8 +32,8 @@ const NavHeader: React.FC<NavHeaderProps> = ({
     style[`openFrom${capitalize(openFrom)}`],
     {
       [style.opened]: navOpened,
-      [style.isFixed]: isFixed,
-      [style.transparent]: transparent
+      [style.fixed]: isFixed,
+      [style.transparent]: isTransparent
     }
   )
 
@@ -62,16 +64,18 @@ const NavHeader: React.FC<NavHeaderProps> = ({
               onClick={onNavClick}
             />
 
-            <div className={style.headerLogo}>
-              <figure>
-                <img src={logoPath} />
-              </figure>
-            </div>
+            {LogoComponent && (
+              <div className={style.headerLogo}>
+                <LogoComponent />
+              </div>
+            )}
           </div>
 
           <nav className={style.nav}>
             <ul className={style.navList}>{children}</ul>
           </nav>
+
+          {ExtraContent && <ExtraContent />}
         </div>
       </div>
     </div>

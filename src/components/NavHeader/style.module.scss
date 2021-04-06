@@ -8,33 +8,28 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  min-height: var(--size-header-height);
+  height: var(--size-header-height);
   position: static;
 }
 
-.fixed {
+.header {
+  width: 100%;
+  box-shadow: var(--shadow-1);
+  transition: background-color 200ms linear;
+  background-color: var(--color-white);
+}
+
+.fixed .header {
   position: fixed;
   top: 0;
   left: 0;
   z-index: var(--depth-sidebar-nav);
 }
 
-.header {
-  width: 100%;
-  box-shadow: var(--shadow-1);
-  background-color: var(--color-white);
-  transition: background-color 200ms linear;
-}
-
-.transparent .header {
-  box-shadow: none;
-  background-color: transparent;
-  transition: background-color 200ms linear;
-}
-
 .navContainer {
   height: var(--size-header-height);
   width: 100%;
+  padding: var(--spacing-xs) var(--spacing-md);
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -42,7 +37,6 @@
 }
 
 .headerActions {
-  padding: 0 var(--spacing-md);
   box-sizing: border-box;
   width: 100%;
   height: var(--size-header-height);
@@ -58,14 +52,21 @@
   position: fixed;
   top: 0;
   left: 0;
+  padding: 0 var(--spacing-md);
   z-index: calc(var(--depth-sidebar-nav) + 1);
 }
 
-.opened .headerLogo svg {
-  fill: var(--color-white);
+.headerLogo {
+  max-width: 100px;
 }
 
-.transparent .headerLogo svg {
+.headerLogo figure,
+.headerLogo img,
+.headerLogo svg {
+  max-width: 100%;
+}
+
+.opened .headerLogo svg {
   fill: var(--color-white);
 }
 
@@ -75,7 +76,7 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: var(--color-primary-900);
+  background-color: var(--color-white);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -108,7 +109,7 @@
   list-style: none;
   width: 100%;
   height: calc(100vh - var(--size-header-height));
-  padding: var(--size-header-height) var(--spacing-lg) 0;
+  padding: var(--spacing-lg) var(--spacing-lg) 0;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -125,6 +126,7 @@
   .navContainer {
     width: var(--size-container-width);
     max-width: calc(100% - var(--spacing-lg));
+    padding: var(--spacing-xs) var(--spacing-md);
   }
 
   .container .nav {

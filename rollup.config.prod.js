@@ -15,29 +15,30 @@ const name = 'ReactComponents'
 
 const external = [
   'react',
+  'react/jsx-runtime',
   'react-dom',
   'classnames',
   'react-lazy-load-image-component',
   'react-device-detect',
   'react-select',
-  'glider-js',
+  'glider-js'
 ]
 
 const globals = {
   react: 'React',
-  'react-dom': 'ReactDOM',
+  'react-dom': 'ReactDOM'
 }
 
 const plugins = [
   progress(),
   typescript({
-    typescript: require('typescript'),
+    typescript: require('typescript')
   }),
   json(),
   postcss({
     extract: true,
     autoModules: true,
-    include: '**/*\.s(a|c)ss',
+    include: '**/*.s(a|c)ss',
     extensions: ['.css', '.scss'],
     plugins: [
       url({
@@ -49,24 +50,25 @@ const plugins = [
   }),
   copy({
     targets: [
-      { src: 'src/css/tokens.css', dest: 'dist/' },
+      { src: 'src/css/custom-tokens.css', dest: 'dist/' },
+      { src: 'src/css/base-tokens.css', dest: 'dist/' },
       { src: 'src/css/reset.css', dest: 'dist/' }
     ]
   }),
   terser(),
   analyze(),
-  fileSize(),
+  fileSize()
 ]
 
 const outputData = [
   {
     file: pkg.main,
-    format: 'cjs',
+    format: 'cjs'
   },
   {
     file: pkg.module,
-    format: 'es',
-  },
+    format: 'es'
+  }
 ]
 
 const config = outputData.map(({ file, format }) => ({
@@ -75,10 +77,10 @@ const config = outputData.map(({ file, format }) => ({
     file,
     format,
     name,
-    globals,
+    globals
   },
   external,
-  plugins,
+  plugins
 }))
 
 export default config

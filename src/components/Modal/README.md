@@ -2,7 +2,7 @@
 ```js
 import Button from '../Button'
 import Typography from '../Typography'
-import CourseCard from '../CourseCard'
+import ProductCard from '../ProductCard'
 
 const [opened, setOpened] = React.useState(false)
 
@@ -19,7 +19,7 @@ const [opened, setOpened] = React.useState(false)
       should camera poor raise shall again teach before found disappear hello chemical.
     </Typography>
 
-    <CourseCard
+    <ProductCard
       title="Atualização em endodontia"
       area="Odontologia"
       begin="Ago/20"

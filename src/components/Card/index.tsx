@@ -4,7 +4,6 @@ import style from './style.module.scss'
 
 interface CardProps {
   className?: string
-  hover?: boolean
 }
 
 const Card: React.FC<CardProps> = ({ className, children }) => (

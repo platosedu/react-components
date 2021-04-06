@@ -17,6 +17,7 @@ $variants: primary, secondary, neutral-dark, neutral-light, error, alert, info, 
   outline: none;
   -webkit-tap-highlight-color: transparent;
   box-sizing: border-box;
+  white-space: nowrap;
 
   &:active {
     box-shadow: var(--shadow-1);
@@ -150,6 +151,7 @@ $variants: primary, secondary, neutral-dark, neutral-light, error, alert, info, 
       }
     }
 
+    &.onlyText,
     &.outline {
       background: transparent;
       border: 1px solid var(--color-#{$variant}-500);
@@ -165,15 +167,25 @@ $variants: primary, secondary, neutral-dark, neutral-light, error, alert, info, 
 
       &:hover,
       &:focus {
-        color: var(--color-#{$variant}-600);
+        color: var(--color-#{$variant}-700);
       }
 
       &:active {
+        box-shadow: unset;
         color: var(--color-#{$variant}-700);
+        transform: scale(0.99);
       }
 
       .icon {
         fill: var(--color-#{$variant}-500);
+      }
+    }
+
+    &.onlyText {
+      border: none;
+
+      &:active {
+        transform: scale(0.97);
       }
     }
   }

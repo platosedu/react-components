@@ -4,8 +4,7 @@ import Card from './components/Card'
 import Carousel from './components/Carousel'
 import CheckBox from './components/CheckBox'
 import CircledInfo from './components/CircledInfo'
-import CourseCard from './components/CourseCard'
-import CourseCardPricing from './components/CourseCardPricing'
+import ProductCard from './components/ProductCard'
 import Dropdown from './components/Dropdown'
 import FieldText from './components/FieldText'
 import Icon from './components/Icon'
@@ -14,7 +13,6 @@ import LoadingIcon from './components/LoadingIcon'
 import Modal from './components/Modal'
 import RadioButton from './components/RadioButton'
 import SimpleTable from './components/SimpleTable'
-import SubHeader from './components/SubHeader'
 import NavHeader from './components/NavHeader'
 import NavItem from './components/NavItem'
 import Typography from './components/Typography'
@@ -26,8 +24,7 @@ export {
   Carousel,
   CheckBox,
   CircledInfo,
-  CourseCard,
-  CourseCardPricing,
+  ProductCard,
   Dropdown,
   FieldText,
   Icon,
@@ -36,7 +33,6 @@ export {
   Modal,
   RadioButton,
   SimpleTable,
-  SubHeader,
   NavHeader,
   NavItem,
   Typography
