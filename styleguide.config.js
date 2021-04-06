@@ -13,7 +13,8 @@ module.exports = {
   ],
   skipComponentsWithoutExample: true,
   require: [
-    path.join(__dirname, './src/css/tokens.css'),
+    path.join(__dirname, './src/css/base-tokens.css'),
+    path.join(__dirname, './src/css/custom-tokens.css'),
     path.join(__dirname, './src/css/reset.css'),
     path.join(__dirname, './node_modules/glider-js/glider.css')
   ],
@@ -29,10 +30,7 @@ module.exports = {
   },
   webpackConfig: {
     resolve: {
-      modules: [
-        path.resolve(__dirname, 'src'),
-        "node_modules"
-      ]
+      modules: [path.resolve(__dirname, 'src'), 'node_modules']
     },
     module: {
       rules: [
@@ -80,7 +78,6 @@ module.exports = {
                 sourceMap: true
               }
             }
-
           ]
         },
         {

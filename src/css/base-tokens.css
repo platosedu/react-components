@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+:root {
+  /* general sizes */
+  --size-field-height: 48px;
+  --size-dropdown-option-height: 48px;
+  --size-image-logo-width: 128px;
+  --size-image-logo-height: 58px;
+
+  --size-lg-button-height: 71px;
+  --size-md-button-height: 48px;
+  --size-sm-button-height: 40px;
+
+  --size-inline-button-height: 32px;
+  --size-micro-button-height: 24px;
+
+  --size-extended-button-height: 48px;
+  --size-extended-micro-button-height: 28px;
+  --size-circular-button: 64px;
+  --size-circular-micro-button: 32px;
+
+  --size-header-height: 70px;
+  --size-nav-item-height: 46px;
+  --size-container-width: 1280px;
+
+  /* Checkbox */
+  --size-sm-checkbox-height: 13px;
+  --size-md-checkbox-height: 18px;
+  --size-lg-checkbox-height: 23px;
+
+  --size-sm-checkbox-width: 13px;
+  --size-md-checkbox-width: 18px;
+  --size-lg-checkbox-width: 23px;
+
+  /* Radio Button */
+  --size-sm-radiobutton-height: 13px;
+  --size-md-radiobutton-height: 18px;
+  --size-lg-radiobutton-height: 23px;
+
+  --size-sm-radiobutton-width: 13px;
+  --size-md-radiobutton-width: 18px;
+  --size-lg-radiobutton-width: 23px;
+
+  /* icon sizes */
+  --size-icon-xxs: 12px;
+  --size-icon-xs: 16px;
+  --size-icon-sm: 20px;
+  --size-icon-md: 24px;
+  --size-icon-lg: 32px;
+  --size-icon-xl: 48px;
+  --size-icon-xxl: 48px;
+  --size-icon-xxxl: 64px;
+
+  /* depths */
+  --depth-base: 1;
+  --depth-card-course-pricing: 1;
+  --depth-dropdown-menu: 2;
+  --depth-header: 2;
+  --depth-sidebar-nav: 3;
+  --depth-side-menu: 3;
+  --depth-modal: 3;
+  --depth-tooltip: 4;
+}
+
