@@ -4,12 +4,11 @@ const [ isChecked, setIsChecked ] = React.useState(false)
 
 ;<CheckBox
   name="small"
+  label="Já conclui a graduação"
   size="sm"
   checked={isChecked}
   onChange={(e) => { setIsChecked(e.target.checked) }}
->
-  Já conclui a graduação
-</CheckBox>
+/>
 ```
 
 ### Checkbox MD
@@ -18,12 +17,11 @@ const [ isChecked, setIsChecked ] = React.useState(false)
 
 ;<CheckBox
   name="medium"
+  label="Já conclui a graduação"
   size="md"
   checked={isChecked}
   onChange={(e) => { setIsChecked(e.target.checked) }}
->
-  Já conclui a graduação
-</CheckBox>
+/>
 ```
 
 ### Checkbox LG
@@ -32,12 +30,11 @@ const [ isChecked, setIsChecked ] = React.useState(false)
 
 ;<CheckBox
   name="large"
+  label="Já conclui a graduação"
   size="lg"
   checked={isChecked}
   onChange={(e) => { setIsChecked(e.target.checked) }}
->
-  Já conclui a graduação
-</CheckBox>
+/>
 ```
 
 ### Checkbox disabled
@@ -46,13 +43,11 @@ const [ isChecked, setIsChecked ] = React.useState(false)
 
 ;<CheckBox
   name="disabled"
-  description="Já conclui a graduação"
+  label="Já conclui a graduação"
   checked={isChecked}
   disabled
   onChange={(e) => { setIsChecked(e.target.checked) }}
->
-  Já conclui a graduação
-</CheckBox>
+/>
 ```
 
 ### Checkbox disabled checked
@@ -61,11 +56,9 @@ const [ isChecked, setIsChecked ] = React.useState(true)
 
 ;<CheckBox
   name="disabledChecked"
-  description="Já conclui a graduação"
+  label="Já conclui a graduação"
   checked={isChecked}
   disabled
   onChange={(e) => { setIsChecked(e.target.checked) }}
->
-  Já conclui a graduação
-</CheckBox>
+/>
 ```
