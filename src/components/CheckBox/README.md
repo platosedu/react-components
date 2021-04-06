@@ -1,51 +1,71 @@
 ### Checkbox SM
 ```tsx
-<CheckBox
+const [ isChecked, setIsChecked ] = React.useState(false)
+
+;<CheckBox
   name="small"
-  description="Já conclui a graduação"
   size="sm"
-  checked={true}
-  onChange={(e) => e.target.checked }
-/>
+  checked={isChecked}
+  onChange={(e) => { setIsChecked(e.target.checked) }}
+>
+  Já conclui a graduação
+</CheckBox>
 ```
 
 ### Checkbox MD
 ```tsx
-<CheckBox
+const [ isChecked, setIsChecked ] = React.useState(false)
+
+;<CheckBox
   name="medium"
-  description="Já conclui a graduação"
   size="md"
-  onChange={(e) => e.target.checked }
-/>
+  checked={isChecked}
+  onChange={(e) => { setIsChecked(e.target.checked) }}
+>
+  Já conclui a graduação
+</CheckBox>
 ```
 
 ### Checkbox LG
 ```tsx
-<CheckBox
+const [ isChecked, setIsChecked ] = React.useState(false)
+
+;<CheckBox
   name="large"
-  description="Já conclui a graduação"
   size="lg"
-  onChange={(e) => e.target.checked }
-/>
+  checked={isChecked}
+  onChange={(e) => { setIsChecked(e.target.checked) }}
+>
+  Já conclui a graduação
+</CheckBox>
 ```
 
 ### Checkbox disabled
 ```tsx
-<CheckBox
+const [ isChecked, setIsChecked ] = React.useState(false)
+
+;<CheckBox
   name="disabled"
   description="Já conclui a graduação"
-  readonly={true}
-  onChange={(e) => e.target.checked }
-/>
+  checked={isChecked}
+  disabled
+  onChange={(e) => { setIsChecked(e.target.checked) }}
+>
+  Já conclui a graduação
+</CheckBox>
 ```
 
 ### Checkbox disabled checked
 ```tsx
-<CheckBox
+const [ isChecked, setIsChecked ] = React.useState(true)
+
+;<CheckBox
   name="disabledChecked"
   description="Já conclui a graduação"
-  checked={true}
-  readonly={true}
-  onChange={(e) => e.target.checked }
-/>
+  checked={isChecked}
+  disabled
+  onChange={(e) => { setIsChecked(e.target.checked) }}
+>
+  Já conclui a graduação
+</CheckBox>
 ```
