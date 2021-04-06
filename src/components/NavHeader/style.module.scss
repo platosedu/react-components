@@ -8,13 +8,12 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  min-height: var(--size-header-height);
+  height: var(--size-header-height);
   position: static;
 }
 
 .header {
   width: 100%;
-  padding-right: var(--spacing-md);
   box-shadow: var(--shadow-1);
   transition: background-color 200ms linear;
   background-color: var(--color-white);
@@ -28,9 +27,9 @@
 }
 
 .navContainer {
-  min-height: var(--size-header-height);
+  height: var(--size-header-height);
   width: 100%;
-  padding: var(--spacing-xs) 0;
+  padding: var(--spacing-xs) var(--spacing-md);
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -38,7 +37,6 @@
 }
 
 .headerActions {
-  padding: 0 var(--spacing-md);
   box-sizing: border-box;
   width: 100%;
   height: var(--size-header-height);
@@ -54,6 +52,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  padding: 0 var(--spacing-md);
   z-index: calc(var(--depth-sidebar-nav) + 1);
 }
 
@@ -61,7 +60,9 @@
   max-width: 100px;
 }
 
-.headerLogoImg {
+.headerLogo figure,
+.headerLogo img,
+.headerLogo svg {
   max-width: 100%;
 }
 
@@ -112,10 +113,6 @@
 }
 
 @media only screen and (min-width: 1024px) {
-  .header {
-    padding-right: unset;
-  }
-
   .navIcon {
     display: none;
   }
@@ -129,6 +126,7 @@
   .navContainer {
     width: var(--size-container-width);
     max-width: calc(100% - var(--spacing-lg));
+    padding: var(--spacing-xs) var(--spacing-md);
   }
 
   .container .nav {

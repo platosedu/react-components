@@ -34,18 +34,6 @@ exports[`NavHeader: simple render test 1`] = `
             />
           </button>
         </div>
-        <div
-          className="headerLogo"
-        >
-          <figure
-            className="headerLogoFigure"
-          >
-            <img
-              className="headerLogoImg"
-              src="http://d9hhrg4mnvzow.cloudfront.net/www.platosedu.com.br/28f9146a-asset-4_104q00r000000000000028.png"
-            />
-          </figure>
-        </div>
       </div>
       <nav
         className="nav"
