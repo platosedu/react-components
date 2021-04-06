@@ -33,6 +33,23 @@ const variants = ['primary', 'secondary', 'neutral-dark', 'neutral-light', 'erro
 </>
 ```
 
+### Only Text
+```tsx
+const variants = ['primary', 'secondary', 'neutral-dark', 'neutral-light', 'error', 'alert', 'info', 'success'];
+
+;<>
+  <div style={{
+    display: 'grid',
+    gridGap: '1rem',
+    gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))'
+  }}>
+    {variants.map(variant => (
+      <Button fillType="onlyText" key={variant} variant={variant} label={variant} />
+    ))}
+  </div>
+</>
+```
+
 ### With prefix icon
 ```tsx
 const variants = ['primary', 'secondary', 'neutral-dark', 'neutral-light', 'error', 'alert', 'info', 'success'];
