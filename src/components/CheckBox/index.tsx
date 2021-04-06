@@ -8,12 +8,12 @@ export interface CheckBoxProps {
   className?: string
   id?: string
   name?: string
-  label: string
+  label?: string
   error?: string | null
   hint?: string | null
   size?: 'sm' | 'md' | 'lg'
   checked?: boolean
-  readonly?: boolean
+  disabled?: boolean
 }
 
 const CheckBox: React.FC<CheckBoxProps> = ({
@@ -22,11 +22,12 @@ const CheckBox: React.FC<CheckBoxProps> = ({
   value,
   name,
   label,
+  children,
   error,
   hint,
   size = 'sm',
   checked,
-  readonly,
+  disabled,
   onChange
 }) => {
   let sizeCheckBox = ''
@@ -59,10 +60,10 @@ const CheckBox: React.FC<CheckBoxProps> = ({
             value={value}
             onChange={onChange}
             checked={checked}
-            disabled={readonly}
+            disabled={disabled}
           />
 
-          <span className={style.label}>{label}</span>
+          <span className={style.label}>{label || children}</span>
         </label>
 
         <p className={style.supportText}>{(error ? error : '') || hint}</p>
