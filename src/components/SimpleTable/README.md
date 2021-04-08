@@ -1,4 +1,7 @@
 ### SimpleTable
+
+> Caution: this component uses `dangerouslySetInnerHTML` to render HTML inside cells, so maybe you need to sanitize the content before passing the `data` param in order to prevent XSS attacks
+
 ```js
 <div
   style={{
