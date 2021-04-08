@@ -64,7 +64,7 @@ const Typography: React.FC<TypographyProps> = ({
     return (
       <TypographyElement
         className={typographyClassNames}
-        dangerouslySetInnerHTML={{ __html: dangerouslySetInnerHTML }}
+        dangerouslySetInnerHTML={dangerouslySetInnerHTML}
       />
     )
   }
