@@ -21,7 +21,7 @@ type TypographyVariant =
   | 'buttonXXS'
 interface TypographyProps {
   className?: string
-  innerHTML?: string
+  dangerouslySetInnerHTML?: string
   variant?: TypographyVariant
   element?: React.ElementType
 }
@@ -29,7 +29,7 @@ interface TypographyProps {
 const Typography: React.FC<TypographyProps> = ({
   className,
   children,
-  innerHTML,
+  dangerouslySetInnerHTML,
   variant = 'bodySM',
   element
 }) => {
@@ -60,11 +60,11 @@ const Typography: React.FC<TypographyProps> = ({
 
   const TypographyElement = element || elementMap[variant]
 
-  if (innerHTML) {
+  if (dangerouslySetInnerHTML) {
     return (
       <TypographyElement
         className={typographyClassNames}
-        dangerouslySetInnerHTML={{ __html: innerHTML }}
+        dangerouslySetInnerHTML={{ __html: dangerouslySetInnerHTML }}
       />
     )
   }
