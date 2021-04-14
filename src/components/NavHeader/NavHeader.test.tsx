@@ -8,12 +8,11 @@ import NavHeader from './index'
 test('NavHeader: simple render test', () => {
   const component = renderer.create(
     <NavHeader
-      logoPath="http://d9hhrg4mnvzow.cloudfront.net/www.platosedu.com.br/28f9146a-asset-4_104q00r000000000000028.png"
       navOpened={false}
       onNavClick={(): void => {
         console.log('clicked')
       }}
-      transparent={false}
+      isTransparent={false}
     >
       <NavItem url="#" label="conheça a Ahazou" icon="mono_book" />
       <NavItem url="#" label="perguntas frequentes" icon="mono_book" />
