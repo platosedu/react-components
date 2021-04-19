@@ -29,12 +29,6 @@
     padding: var(--spacing-sm) var(--spacing-md) 0;
   }
 
-  .isTextarea & {
-    height: calc(var(--size-field-height) * 2);
-    padding: var(--spacing-lg) var(--spacing-md);
-    resize: vertical;
-  }
-
   &::-webkit-input-placeholder {
     color: var(--color-neutral-light-300);
   }
@@ -47,7 +41,7 @@
     color: var(--color-neutral-light-300);
   }
 
-  .bordered & {
+  .isBordered & {
     border: 1px solid var(--color-neutral-light-200);
   }
 }
@@ -78,12 +72,12 @@
   cursor: pointer;
 }
 
-.disabled .prefixIcon,
-.disabled .suffixIcon {
+.isDisabled .prefixIcon,
+.isDisabled .suffixIcon {
   fill: var(--color-neutral-light-300);
 }
 
-.disabled .input {
+.isDisabled .input {
   color: var(--color-neutral-light-300);
   border-color: var(--color-neutral-light-200);
 }
@@ -102,7 +96,7 @@
   left: calc(var(--spacing-md) + var(--size-icon-sm) + var(--spacing-md));
 }
 
-.disabled .label {
+.isDisabled .label {
   color: var(--color-neutral-light-300);
 }
 
@@ -118,22 +112,22 @@
   text-align: right;
 }
 
-.disabled .supportText {
+.isDisabled .supportText {
   color: var(--color-neutral-light-300);
 }
 
-.focused .input {
+.isFocused .input {
   border-color: var(--color-primary-500);
 }
 
-.focused:not(.bordered) .input {
+.isFocused:not(.isBordered) .input {
   border: 1px solid var(--color-primary-700-opacity);
 }
 
 .hasPlaceholder .label,
-.filled .label,
-.focused .label,
-.isTextarea .label {
+.isFilled .label,
+.isFocused .label,
+.isFixedLabel .label {
   font-size: var(--font-size-xxs);
   top: var(--spacing-sm);
   transform: translateY(-50%);
@@ -144,24 +138,23 @@
 }
 
 .hasPrefixIcon.hasPlaceholder .label,
-.hasPrefixIcon.filled .label,
-.hasPrefixIcon.focused .label,
-.hasPrefixIcon.isTextarea .label {
+.hasPrefixIcon.isFilled .label,
+.hasPrefixIcon.isFocused .label {
   left: calc(var(--spacing-md) + var(--size-icon-sm) + var(--spacing-md));
   width: calc(100% - (var(--spacing-md) + var(--size-icon-sm) + var(--spacing-md)) - 2px);
 }
 
-.focused .label {
+.isFocused .label {
   color: var(--color-primary-500);
 }
 
-.error,
-.error .supportText,
-.error .field .label {
+.hasError,
+.hasError .supportText,
+.hasError .field .label {
   color: var(--color-error-500);
 }
 
-.error .field .input {
+.hasError .field .input {
   border-color: var(--color-error-500);
   caret-color: var(--color-error-500);
 }
