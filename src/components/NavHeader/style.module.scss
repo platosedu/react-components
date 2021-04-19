@@ -64,6 +64,7 @@
 .headerLogo img,
 .headerLogo svg {
   max-width: 100%;
+  max-height: calc(var(--size-header-height) - (var(--spacing-xs)*2));
 }
 
 .opened .headerLogo svg {

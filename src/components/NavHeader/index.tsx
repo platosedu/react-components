@@ -11,7 +11,7 @@ interface NavHeaderProps {
   openFrom?: 'top' | 'left'
   navOpened: boolean
   logoComponent?: React.ElementType
-  extraContentComponent: React.ElementType
+  extraContentComponent?: React.ElementType
   onNavClick: () => void
 }
 

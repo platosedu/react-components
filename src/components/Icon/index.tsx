@@ -5,6 +5,7 @@ import classNames from 'classnames'
 import icons from './icons/icons.json'
 import style from './style.module.scss'
 
+// The IconSlugsType is one of keys of icons collection
 export type IconSlugsType = keyof typeof icons
 
 interface IconProps {
