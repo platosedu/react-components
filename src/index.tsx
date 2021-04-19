@@ -7,6 +7,7 @@ import CircledInfo from './components/CircledInfo'
 import ProductCard from './components/ProductCard'
 import Dropdown from './components/Dropdown'
 import FieldText from './components/FieldText'
+import FieldTextArea from './components/FieldTextArea'
 import Icon from './components/Icon'
 import ImgMask from './components/ImgMask'
 import LoadingIcon from './components/LoadingIcon'
@@ -27,6 +28,7 @@ export {
   ProductCard,
   Dropdown,
   FieldText,
+  FieldTextArea,
   Icon,
   ImgMask,
   LoadingIcon,
