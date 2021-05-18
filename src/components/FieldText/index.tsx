@@ -22,7 +22,7 @@ export interface FieldTextProps {
   required?: boolean
   bordered?: boolean
   error?: string | null
-  type?: 'text' | 'password' | 'email' | 'search' | 'number' | 'color'
+  type?: 'text' | 'password' | 'email' | 'search' | 'number' | 'color' | 'date';
   autocomplete?: 'on' | 'off'
   prefixIcon?: IconSlugsType
   prefixIconPath?: string
